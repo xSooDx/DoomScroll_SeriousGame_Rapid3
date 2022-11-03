@@ -173,7 +173,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh30762
+  m_Name: pb_Mesh60820
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1933,7 +1933,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh30804
+  m_Name: pb_Mesh60862
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2957,6 +2957,75 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &2423942897404466807
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2584169807779272826, guid: b4a3479bae417d44e8c81219593d67bb,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 2584169807779272826, guid: b4a3479bae417d44e8c81219593d67bb,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.7679546
+      objectReference: {fileID: 0}
+    - target: {fileID: 2584169807779272826, guid: b4a3479bae417d44e8c81219593d67bb,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.92541814
+      objectReference: {fileID: 0}
+    - target: {fileID: 2584169807779272826, guid: b4a3479bae417d44e8c81219593d67bb,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.9249165
+      objectReference: {fileID: 0}
+    - target: {fileID: 2584169807779272826, guid: b4a3479bae417d44e8c81219593d67bb,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2584169807779272826, guid: b4a3479bae417d44e8c81219593d67bb,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2584169807779272826, guid: b4a3479bae417d44e8c81219593d67bb,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2584169807779272826, guid: b4a3479bae417d44e8c81219593d67bb,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2584169807779272826, guid: b4a3479bae417d44e8c81219593d67bb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2584169807779272826, guid: b4a3479bae417d44e8c81219593d67bb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2584169807779272826, guid: b4a3479bae417d44e8c81219593d67bb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5690940745221721016, guid: b4a3479bae417d44e8c81219593d67bb,
+        type: 3}
+      propertyPath: m_Name
+      value: DoomScrollGameManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b4a3479bae417d44e8c81219593d67bb, type: 3}
 --- !u!1001 &6261723290209954219
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2964,6 +3033,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 852266079806774073, guid: d18f1843bee4e3e468cc12302f6b28b6,
+        type: 3}
+      propertyPath: leftHapticAction
+      value: 
+      objectReference: {fileID: 3215650258570939094, guid: da2b439d1a2de5c46a4f428f8cf4fe19,
+        type: 3}
+    - target: {fileID: 852266079806774073, guid: d18f1843bee4e3e468cc12302f6b28b6,
+        type: 3}
+      propertyPath: rightHapticAction
+      value: 
+      objectReference: {fileID: 138396950478516224, guid: da2b439d1a2de5c46a4f428f8cf4fe19,
+        type: 3}
     - target: {fileID: 1378469844969421288, guid: d18f1843bee4e3e468cc12302f6b28b6,
         type: 3}
       propertyPath: m_Elasticity

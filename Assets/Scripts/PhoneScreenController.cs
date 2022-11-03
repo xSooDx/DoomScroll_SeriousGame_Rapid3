@@ -1,65 +1,61 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.InputSystem;
 using UnityEngine.XR.Interaction.Toolkit.UI;
+using UnityEngine.XR.OpenXR.Input;
 
 public class PhoneScreenController : MonoBehaviour
 {
     [SerializeField] DoomScrollPostCollection postCollection;
     [SerializeField] TrackedDeviceGraphicRaycaster tdgr;
     [SerializeField] DoomScrollPost postPrefab;
-    [SerializeField] ScrollRect scrollRect;
+    [SerializeField] RectTransform content;
+
+    [SerializeField] InputActionReference leftHapticAction;
+    [SerializeField] InputActionReference rightHapticAction;
 
     float postHeight;
-
+    int currentPostIndex = 0;
     bool inputEnabled = false;
 
     void Start()
     {
-        scrollRect.onValueChanged.AddListener(OnScrollEvent);
-        foreach (DoomScrollPostData post in postCollection.list)
-        {
-            CreatePost(post);
-        }
-        postHeight = postPrefab.GetComponent<RectTransform>().rect.height;
-    }
-
-    private void Update()
-    {
-        if (inputEnabled)
-        {
-
-        }
+        LoadPost(currentPostIndex);
     }
 
     // Update is called once per frame
     void LateUpdate()
     {
-
-        float div = scrollRect.content.transform.localPosition.y / postHeight;
-        float fraction = div - (long)div;
-        if (fraction > 0.01f && fraction < 0.99f)
-        {
-            if (fraction < 0.5)
-            {
-                scrollRect.content.transform.position -= scrollRect.content.transform.up * Time.deltaTime * 0.05f;
-            }
-            else if (fraction >= 0.5)
-            {
-                scrollRect.content.transform.position += scrollRect.content.transform.up * Time.deltaTime * 0.1f;
-            }
-        }
-
-        Debug.Log("LateUpdate " + postHeight + ", " + scrollRect.content.transform.localPosition.y);
         //scrollRect.content.transform.position += scrollRect.content.transform.up * Time.deltaTime * 0.05f;
+    }
+
+    void LoadPost(int idx)
+    {
+        if (content.childCount > 0) Destroy(content.GetChild(0).gameObject) ;
+
+        if (idx < postCollection.list.Count)
+        {
+            DoomScrollPostData data = postCollection.list[idx];
+            CreatePost(data);
+        }
     }
 
     void CreatePost(DoomScrollPostData data)
     {
-        DoomScrollPost newPost = Instantiate(postPrefab, scrollRect.content);
-        newPost.postImage = data.postImage;
-        // Set newPostData
+        DoomScrollPost newPost = Instantiate(postPrefab, content);
+        newPost.postData = data;
+    }
+
+    public void GoToNextPost()
+    {
+        if (currentPostIndex < postCollection.list.Count)
+        {
+            currentPostIndex++;
+            LoadPost(currentPostIndex);
+        }
+        GameManager.instance.AddDoomPoints(10);
+        //OpenXRInput.SendHapticImpulse(leftHapticAction, 1, 1);
     }
 
     void OnScrollEvent(Vector2 pos)

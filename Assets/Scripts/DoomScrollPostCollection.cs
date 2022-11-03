@@ -13,6 +13,6 @@ public class DoomScrollPostCollection : ScriptableObject
 public class DoomScrollPostData
 {
     public Sprite postImage;
-    public string postCaption;
+    public string postTitle;
 }
 

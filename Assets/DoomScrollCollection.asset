@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   list:
   - postImage: {fileID: 21300000, guid: 5903902d24215fd4e83fc6fcbb09128d, type: 3}
-    postCaption: A
+    postTitle: Love
   - postImage: {fileID: 21300000, guid: 628359c0424ba574eb0c07aa80b4de96, type: 3}
-    postCaption: B
+    postTitle: Death
   - postImage: {fileID: 21300000, guid: 96c367208aa8a5e4e94428b80451fe90, type: 3}
-    postCaption: C
+    postTitle: Robots
   - postImage: {fileID: 21300000, guid: 17c18df82fe4ac24c9f87822e2488d1b, type: 3}
-    postCaption: D
+    postTitle: Derp
