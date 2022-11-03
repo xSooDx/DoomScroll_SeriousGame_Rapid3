@@ -1921,6 +1921,53 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &747769771
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 747769773}
+  - component: {fileID: 747769772}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &747769772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 747769771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2652ee7b1e537044985180ef823a4f50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doomEventCollection: {fileID: 11400000, guid: bfa8e7349387ac74fa1cedbc760266ed,
+    type: 2}
+  doomPoints: 0
+--- !u!4 &747769773
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 747769771}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.0006847, y: 0.7134772, z: -0.105495386}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1068358391 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6031212950816350195, guid: 55c2402ba6f8a7647921a1b1125da34e,
@@ -2193,6 +2240,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1247161724713855647, guid: 55c2402ba6f8a7647921a1b1125da34e,
     type: 3}
   m_PrefabInstance: {fileID: 7172322829765537558}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1419810805 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6261723290218848975, guid: d18f1843bee4e3e468cc12302f6b28b6,
+    type: 3}
+  m_PrefabInstance: {fileID: 6261723290209954219}
   m_PrefabAsset: {fileID: 0}
 --- !u!850595691 &1426071710
 LightingSettings:
@@ -2964,6 +3017,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 852266079806774073, guid: d18f1843bee4e3e468cc12302f6b28b6,
+        type: 3}
+      propertyPath: leftHapticAction
+      value: 
+      objectReference: {fileID: 3215650258570939094, guid: da2b439d1a2de5c46a4f428f8cf4fe19,
+        type: 3}
+    - target: {fileID: 852266079806774073, guid: d18f1843bee4e3e468cc12302f6b28b6,
+        type: 3}
+      propertyPath: rightHapticAction
+      value: 
+      objectReference: {fileID: 138396950478516224, guid: da2b439d1a2de5c46a4f428f8cf4fe19,
+        type: 3}
     - target: {fileID: 1378469844969421288, guid: d18f1843bee4e3e468cc12302f6b28b6,
         type: 3}
       propertyPath: m_Elasticity
@@ -2999,6 +3064,31 @@ PrefabInstance:
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 44104885}
+    - target: {fileID: 6261723290218848973, guid: d18f1843bee4e3e468cc12302f6b28b6,
+        type: 3}
+      propertyPath: m_Activated.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6261723290218848973, guid: d18f1843bee4e3e468cc12302f6b28b6,
+        type: 3}
+      propertyPath: m_Activated.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6261723290218848973, guid: d18f1843bee4e3e468cc12302f6b28b6,
+        type: 3}
+      propertyPath: m_Activated.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1419810805}
+    - target: {fileID: 6261723290218848973, guid: d18f1843bee4e3e468cc12302f6b28b6,
+        type: 3}
+      propertyPath: m_Activated.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6261723290218848973, guid: d18f1843bee4e3e468cc12302f6b28b6,
+        type: 3}
+      propertyPath: m_Activated.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: PhoneScreenController, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 6261723290218848974, guid: d18f1843bee4e3e468cc12302f6b28b6,
         type: 3}
       propertyPath: m_RootOrder

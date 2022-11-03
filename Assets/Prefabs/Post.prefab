@@ -349,10 +349,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e37e9a5f543c3f94b876d6de2416deb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  postImage: {fileID: 0}
-  postTitle: 
+  postData:
+    postImage: {fileID: 0}
+    postTitle: 
   imgComponent: {fileID: 3225398363932111119}
   titleText: {fileID: 1341951971650285282}
+  btn: {fileID: 0}
+  phoneScreenRef: {fileID: 0}
 --- !u!1 &5966377719281593873
 GameObject:
   m_ObjectHideFlags: 0
@@ -609,7 +612,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2070425787818144486}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2682349315427464302}
+        m_TargetAssemblyTypeName: DoomScrollPost, Assembly-CSharp
+        m_MethodName: OnLike
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7385858811533371247
 GameObject:
   m_ObjectHideFlags: 0
@@ -866,7 +881,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7203637033868056517}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2682349315427464302}
+        m_TargetAssemblyTypeName: DoomScrollPost, Assembly-CSharp
+        m_MethodName: OnShare
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &9048212320314140198
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,6 +9,9 @@ public class DoomScrollPost : MonoBehaviour
     public DoomScrollPostData postData;
     [SerializeField] Image imgComponent;
     [SerializeField] TextMeshProUGUI titleText;
+
+    [SerializeField] Button btn;
+    [HideInInspector] public PhoneScreenController phoneScreenRef;
     public void Awake()
     {
         
@@ -18,5 +21,15 @@ public class DoomScrollPost : MonoBehaviour
     {
         imgComponent.sprite = postData.postImage;
         titleText.text = postData.postTitle;
+    }
+
+    public void OnLike()
+    {
+        phoneScreenRef.PostLike();
+    }
+
+    public void OnShare()
+    {
+        phoneScreenRef.PostShare();
     }
 }
