@@ -173,7 +173,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh58848
+  m_Name: pb_Mesh52736
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1933,7 +1933,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh58890
+  m_Name: pb_Mesh52778
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2699,6 +2699,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1604999968}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1636108687 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6031414019793056585, guid: d18f1843bee4e3e468cc12302f6b28b6,
+    type: 3}
+  m_PrefabInstance: {fileID: 6261723290209954219}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1705591608
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2999,6 +3005,31 @@ PrefabInstance:
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 44104885}
+    - target: {fileID: 6261723290218848973, guid: d18f1843bee4e3e468cc12302f6b28b6,
+        type: 3}
+      propertyPath: m_Deactivated.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6261723290218848973, guid: d18f1843bee4e3e468cc12302f6b28b6,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6261723290218848973, guid: d18f1843bee4e3e468cc12302f6b28b6,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6261723290218848973, guid: d18f1843bee4e3e468cc12302f6b28b6,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1636108687}
+    - target: {fileID: 6261723290218848973, guid: d18f1843bee4e3e468cc12302f6b28b6,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6261723290218848974, guid: d18f1843bee4e3e468cc12302f6b28b6,
         type: 3}
       propertyPath: m_RootOrder
@@ -3078,6 +3109,16 @@ PrefabInstance:
       propertyPath: m_AnimateModel
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7172322828274943792, guid: 55c2402ba6f8a7647921a1b1125da34e,
+        type: 3}
+      propertyPath: m_RotateAnchorAction.m_UseReference
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7172322828274943792, guid: 55c2402ba6f8a7647921a1b1125da34e,
+        type: 3}
+      propertyPath: m_TranslateAnchorAction.m_UseReference
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7172322828274943795, guid: 55c2402ba6f8a7647921a1b1125da34e,
         type: 3}
       propertyPath: m_InteractionManager
@@ -3106,6 +3147,16 @@ PrefabInstance:
     - target: {fileID: 7172322828469277203, guid: 55c2402ba6f8a7647921a1b1125da34e,
         type: 3}
       propertyPath: m_AnimateModel
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7172322828469277203, guid: 55c2402ba6f8a7647921a1b1125da34e,
+        type: 3}
+      propertyPath: m_RotateAnchorAction.m_UseReference
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7172322828469277203, guid: 55c2402ba6f8a7647921a1b1125da34e,
+        type: 3}
+      propertyPath: m_TranslateAnchorAction.m_UseReference
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7172322828469277206, guid: 55c2402ba6f8a7647921a1b1125da34e,
