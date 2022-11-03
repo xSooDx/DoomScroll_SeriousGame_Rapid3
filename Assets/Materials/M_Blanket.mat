@@ -8,14 +8,18 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: M_Blanket
-  m_Shader: {fileID: 4800000, guid: b2094b5fef28a0b4993b8746f1438664, type: 3}
-  m_ValidKeywords: []
-  m_InvalidKeywords:
+  m_Shader: {fileID: 4800000, guid: 60e29b7951f20da47b11861d166b7036, type: 3}
+  m_ValidKeywords:
   - _OUTLINETYPE_NORMAL
+  - _OVERLAYMODE1_NONE
+  - _OVERLAYMODE_NONE
   - _RIMSPLITCOLOR_NOSPLIT
   - _USEADDITIONALLIGHTSDIFFUSE_ON
-  - _USELIGHTRAMP_STEP
+  - _USEHATCHINGCONSTANTSCALE_ON
+  - _USELIGHTRAMP_POSTERIZE
+  - _USEPURESKETCH_ON
   - _USESPECULAR_ON
+  m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -85,6 +89,14 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Noise:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Noise2:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -133,19 +145,25 @@ Material:
     m_Floats:
     - _AdaptiveThicnkess: 0
     - _AdditionalLightsAmount: 1
-    - _AdditionalLightsFaloff: 1
+    - _AdditionalLightsFaloff: 0
     - _AdditionalLightsIntesity: 1
     - _AdditionalLightsSmoothnessMultiplier: 1
     - _AlphaCutoff: 0.5
     - _Ambient_RimColor: 0
+    - _Angle: 1
+    - _Angle2: 0.88
     - _BacklightAmount: 0.5
     - _BacklightHardness: 0
     - _BacklightIntensity: 1
     - _BumpScale: 1
+    - _Contrast: 1
+    - _ContrastON: 0.3
+    - _Contrast_Check: 1
     - _Custom_Point_: 0
     - _CutAngle: 0.1
     - _Cutoff: 0.5
     - _Darken: 0
+    - _DepthOL: 0.003
     - _DetailNormalMapScale: 1
     - _DiffusePosterizeOffset: 0
     - _DiffusePosterizePower: 1
@@ -153,6 +171,7 @@ Material:
     - _DiffuseWarpAffectHalftone: 0
     - _DiffuseWarpBrightnessOffset: 1.12
     - _DstBlend: 0
+    - _Dx: 1
     - _GlossMapScale: 1
     - _Glossiness: 0
     - _GlossyReflections: 1
@@ -173,6 +192,7 @@ Material:
     - _NormalMapStrength: 1
     - _Occlusion: 0
     - _OcclusionStrength: 1
+    - _OutLineOnly: 1
     - _OutlineDynamicSpeed: 0
     - _OutlineNoiseIntesity: 1
     - _OutlineNoiseScale: 10
@@ -240,7 +260,7 @@ Material:
     - _UseEmission: 0
     - _UseEnvironmentRefletion: 0
     - _UseHatchingConstantScale: 1
-    - _UseLightRamp: 0
+    - _UseLightRamp: 2
     - _UseOutline: 0
     - _UsePureSketch: 1
     - _UseRimLight: 0
@@ -255,6 +275,7 @@ Material:
     - _WarpTextureRotation: 0
     - _WarpTextureScale: 1
     - _ZWrite: 1
+    - _isMobile: 1
     m_Colors:
     - _Color: {r: 0.77254903, g: 0.035812326, b: 0, a: 1}
     - _Color_Rim: {r: 1, g: 0, b: 0, a: 0}
@@ -262,6 +283,7 @@ Material:
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _HalftoneColor: {r: 0, g: 0, b: 0, a: 1}
     - _HatchingColor: {r: 0, g: 0, b: 0, a: 1}
+    - _OutLineColor: {r: 0, g: 0, b: 0, a: 1}
     - _OutlineColor: {r: 0, g: 0, b: 0, a: 0}
     - _Outline_Color: {r: 0.09433961, g: 0.09300461, b: 0.09300461, a: 0}
     - _RimColor: {r: 1, g: 1, b: 1, a: 0}
