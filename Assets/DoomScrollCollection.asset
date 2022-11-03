@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cc96a63afaddc045a7d1bf6543a0391, type: 3}
+  m_Name: DoomScrollCollection
+  m_EditorClassIdentifier: 
+  list:
+  - postImage: {fileID: 21300000, guid: 5903902d24215fd4e83fc6fcbb09128d, type: 3}
+    postCaption: A
+  - postImage: {fileID: 21300000, guid: 628359c0424ba574eb0c07aa80b4de96, type: 3}
+    postCaption: B
+  - postImage: {fileID: 21300000, guid: 96c367208aa8a5e4e94428b80451fe90, type: 3}
+    postCaption: C
+  - postImage: {fileID: 21300000, guid: 17c18df82fe4ac24c9f87822e2488d1b, type: 3}
+    postCaption: D
