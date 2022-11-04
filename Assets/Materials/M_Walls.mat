@@ -136,7 +136,7 @@ Material:
     - _MaxScaleDependingOnCamera: 1
     - _Metallic: 0
     - _Mode: 0
-    - _NormalMapStrength: 1
+    - _NormalMapStrength: 0
     - _OcclusionStrength: 1
     - _OutlineDynamicSpeed: 0
     - _OutlineNoiseIntesity: 1
