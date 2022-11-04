@@ -11,6 +11,8 @@ public class MobileXRController : MonoBehaviour
     [SerializeField] Transform leftHandGrabPivot;
     [SerializeField] Transform rightHandGrabPivot;
     [SerializeField] PhoneScreenController phoneScreenController;
+    [SerializeField] GameObject phoneScreen;
+    [SerializeField] GameObject blankScreen;
 
     // Start is called before the first frame update
     private void Awake()
@@ -51,7 +53,8 @@ public class MobileXRController : MonoBehaviour
             phoneScreenController.currentInteractor = controllerInteractor;
             //controllerInteractor.SendHapticImpulse(1, 1);
         }
-        //throw new NotImplementedException();
+        phoneScreen.SetActive(true);
+        blankScreen.SetActive(false);
     }
 
     private void OnDrop(SelectExitEventArgs arg0)
@@ -61,6 +64,8 @@ public class MobileXRController : MonoBehaviour
             Debug.Log("B");
             phoneScreenController.currentInteractor = null;
             //controllerInteractor.SendHapticImpulse(1, 1);
+            phoneScreen.SetActive(false);
+            blankScreen.SetActive(true);
         }
     }
 
