@@ -30,6 +30,13 @@ public class PhoneScreenController : MonoBehaviour
     int currentPostIndex = 0;
     bool inputEnabled = false;
 
+    RectTransform currPost = null;
+    RectTransform prevPost = null;
+
+    bool isScrolling = false;
+
+    public float scrollTime = 0.3f;
+
     void Start()
     {
         scoreText.text = GameManager.instance.DoomScore.ToString();
@@ -48,35 +55,54 @@ public class PhoneScreenController : MonoBehaviour
 
     void LoadPost(int idx)
     {
-        if (content.childCount > 0) Destroy(content.GetChild(0).gameObject);
-
         if (idx < postCollection.list.Count)
         {
             DoomScrollPostData data = postCollection.list[idx];
-            CreatePost(data);
+            prevPost = currPost;
+            currPost = CreatePost(data).GetComponent<RectTransform>();
+            postHeight = currPost.rect.height;
+            PostScroll();
+
         }
     }
+    void PostScroll()
+    {
+        if (prevPost == null) return;
+        isScrolling = true;
+        Debug.Log("postHeight " + postHeight);
+        Vector3 tmp = currPost.localPosition;
+        tmp.y = -postHeight * 1.5f;
+        currPost.localPosition = tmp;
+        prevPost.LeanMoveLocalY(postHeight/2, scrollTime)
+            .setOnComplete(() =>
+                Destroy(prevPost.gameObject)
+            ); ;
+        currPost.LeanMoveLocalY(-postHeight / 2, scrollTime).setOnComplete(() => isScrolling = false);
+    }
 
-    void CreatePost(DoomScrollPostData data)
+    DoomScrollPost CreatePost(DoomScrollPostData data)
     {
         DoomScrollPost newPost = Instantiate(postPrefab, content);
         newPost.postData = data;
         newPost.phoneScreenRef = this;
+        return newPost;
     }
 
     public void GoToNextPost()
     {
+        if (isScrolling) return;
         if (currentPostIndex < postCollection.list.Count)
         {
             currentPostIndex++;
             LoadPost(currentPostIndex);
+            PostView();
         }
-        GameManager.instance.AddDoomPoints(10);
-        PostView();
+        
     }
 
     public void PostView()
     {
+        GameManager.instance.AddDoomPoints(10);
         currentInteractor.SendHapticImpulse(postHapticIntensity, postHapticDuration);
     }
 
