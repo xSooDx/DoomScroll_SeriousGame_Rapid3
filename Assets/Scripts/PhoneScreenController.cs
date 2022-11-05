@@ -26,6 +26,10 @@ public class PhoneScreenController : MonoBehaviour
     [Range(0, 1f)] public float likeHapticDuration = 0.4f;
     [Range(0, 1f)] public float shareHapticDuration = 0.6f;
 
+    [SerializeField] AudioClip shareSound;
+    [SerializeField] AudioClip likeSound;
+    [SerializeField] AudioSource audioSource;
+
     float postHeight;
     int currentPostIndex = 0;
     bool inputEnabled = false;
@@ -108,12 +112,14 @@ public class PhoneScreenController : MonoBehaviour
 
     public void PostLike()
     {
+        audioSource.PlayOneShot(likeSound);
         GameManager.instance.AddDoomPoints(25);
         currentInteractor.SendHapticImpulse(likeHapticIntensity, likeHapticDuration);
     }
 
     public void PostShare()
     {
+        audioSource.PlayOneShot(shareSound);
         GameManager.instance.AddDoomPoints(50);
         currentInteractor.SendHapticImpulse(shareHapticIntensity, shareHapticDuration);
     }

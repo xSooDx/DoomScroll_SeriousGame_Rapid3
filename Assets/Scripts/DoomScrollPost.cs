@@ -28,19 +28,24 @@ public class DoomScrollPost : MonoBehaviour
     Vector3 likeScale;
     Vector3 shareScale;
 
+    int likeCount;
+    int shareCount;
+
     [HideInInspector] public PhoneScreenController phoneScreenRef;
     public void Awake()
     {
-        
+
     }
 
     public void Start()
     {
         imgComponent.sprite = postData.postImage;
         titleText.text = postData.postTitle;
-        int likeCount = Random.Range(8, 99);
-        likeText.text = likeCount + "k";
-        shareText.text = Random.Range(1, likeCount) + "k";
+
+        likeCount = Random.Range(99998, 1001);
+        likeText.text = string.Format("{0:#,###0}", likeCount);
+        shareCount = Random.Range(likeCount, 1001);
+        shareText.text = string.Format("{0:#,###0}", shareCount);
 
         likeScale = likeImgTransform.localScale;
         shareScale = shareImgTransform.localScale;
@@ -57,6 +62,8 @@ public class DoomScrollPost : MonoBehaviour
         StopCoroutine(likePulseRoutine);
         likePulseRoutine = null;
         likeImgTransform.localScale = likeScale;
+        likeCount += 1;
+        likeText.text = string.Format("{0:#,###0}", likeCount);
     }
 
     public void OnShare()
@@ -67,11 +74,12 @@ public class DoomScrollPost : MonoBehaviour
         StopCoroutine(sharePulseRoutine);
         sharePulseRoutine = null;
         shareImgTransform.localScale = shareScale;
+        shareCount += 1;
+        shareText.text = string.Format("{0:#,###0}", shareCount);
     }
 
     IEnumerator LikeSizePulseCoroutine()
     {
-        
         while (true)
         {
             float c = Mathf.Sin(Time.time * pulseFrequency) * pulseAmp;
@@ -84,7 +92,7 @@ public class DoomScrollPost : MonoBehaviour
 
     IEnumerator ShareSizePulseCoroutine()
     {
-        
+
         while (true)
         {
             float c = Mathf.Sin(Time.time * pulseFrequency) * pulseAmp;
