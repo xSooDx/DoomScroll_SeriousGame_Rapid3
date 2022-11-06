@@ -1,0 +1,92 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cc96a63afaddc045a7d1bf6543a0391, type: 3}
+  m_Name: DoomScrollCollection
+  m_EditorClassIdentifier: 
+  list:
+  - postImage: {fileID: 21300000, guid: ac721906c57a44443878958966f0bce5, type: 3}
+    postTitle: Karen spotted impersonating a Buckfarts manager
+    postScore: 10
+  - postImage: {fileID: 21300000, guid: 5f3801daf09e97b4490668f881c5f2e4, type: 3}
+    postTitle: "Top Snypto-currency investors: \u2018The Best is Yet to Come\u2019
+      for unregulated digital currencies"
+    postScore: 10
+  - postImage: {fileID: 21300000, guid: 57589b0e45cb24e49b685ce28c3a15c7, type: 3}
+    postTitle: Oil Spill off the Goof Coast set ablaze during gender-reveal party
+      - 4 Dead 69 Injured
+    postScore: 10
+  - postImage: {fileID: 21300000, guid: 6a108649f455b3644b974f1ae7e20bbf, type: 3}
+    postTitle: "Controversial Musician declares himself God of a religion; its leaders
+      response: \u201CDoes this mean his shoes will be cheaper?"
+    postScore: 10
+  - postImage: {fileID: 21300000, guid: c61c37cad04c49e43b884d21abc08a5c, type: 3}
+    postTitle: Peace talks break down, Premier Korbyenko vows increased military
+      action against the United Regions
+    postScore: 10
+  - postImage: {fileID: 21300000, guid: 63645e573304f144285e6f8721cba8ba, type: 3}
+    postTitle: "Father of Four Kills Entire Family in new trend that\u2019s taking
+      social media by storm"
+    postScore: 10
+  - postImage: {fileID: 21300000, guid: f0d3b4ae140243e4ea5c21f5935d6d2c, type: 3}
+    postTitle: Environment Advocate announces month-long global tour via private
+      jet
+    postScore: 10
+  - postImage: {fileID: 21300000, guid: 4bc54f8aca1a8b0409c055406da06415, type: 3}
+    postTitle: 'Data Analysts and Sociologists agree: social media engagement sucks
+      less than real life'
+    postScore: 10
+  - postImage: {fileID: 21300000, guid: 181c580bdf2ea444aa692b16d648aed1, type: 3}
+    postTitle: "Deplorida Man Marries Alligator, sues for half of clutch in divorce
+      after new spouse refuses to let him \u2018crash in her mud den"
+    postScore: 10
+  - postImage: {fileID: 21300000, guid: 845e91c131fa7bb478143722d612d3b4, type: 3}
+    postTitle: "Student Loan Forgiveness Package Shot Down in Supreme Court Ruling:
+      \u2018I had to pay mine back\u2019 argues former collegiate boofing champion,
+      Judge Chet Canvahaw"
+    postScore: 10
+  - postImage: {fileID: 21300000, guid: eeb6bc1e0a855bf4fbc5b0209b0b4686, type: 3}
+    postTitle: "Why do your friends have amazing lives, but yours sucks? Spoiler
+      Alert, it\u2019s because you are a fucking looser!"
+    postScore: 10
+  - postImage: {fileID: 21300000, guid: 02ff481f01f914d43b37752e36e98fc0, type: 3}
+    postTitle: Ice Caps Shrink to twenty percent, luxury yacht sales skyrocket
+    postScore: 10
+  - postImage: {fileID: 21300000, guid: fa3e55007b743e0429920c5d16fd2a76, type: 3}
+    postTitle: "Hero-Cola execs consider going back to \u2018Classic Recipe\u2019
+      amid plummeting sales numbers"
+    postScore: 10
+  - postImage: {fileID: 21300000, guid: 93fcd9b14bd0a54428563a0b21727d2f, type: 3}
+    postTitle: 'New Industry Study: Micro-plastics good for your body AND the environment'
+    postScore: 10
+  - postImage: {fileID: 21300000, guid: 2c1bcd89da0409a48a1f396cab0e1c5d, type: 3}
+    postTitle: "Experts Agree: New Vaccine Safe; social media moms fire back with
+      their Fooble search results, but who\u2019s REALLY right?"
+    postScore: 10
+  - postImage: {fileID: 21300000, guid: 93771f3693ab8ca4489a1ae8c48bc3bc, type: 3}
+    postTitle: Politician who voted on child protection bill caught masturbating
+      in Pre-school parking lot
+    postScore: 10
+  - postImage: {fileID: 21300000, guid: bb807f99a46748c469ed95a60a76f077, type: 3}
+    postTitle: Military now considering edible ammunition in response to metal and
+      water shortages
+    postScore: 10
+  - postImage: {fileID: 21300000, guid: 0d677f83d7e3dc44cb66afd5e0153298, type: 3}
+    postTitle: Rampant Forest Fires burn Alt-Right fundamentalist compound in the
+      Potatoan wilderness
+    postScore: 10
+  - postImage: {fileID: 21300000, guid: 2f96b2d7d7150ec418716b5612994b24, type: 3}
+    postTitle: 6 dead, 13 wounded in Middle school Shooting, local Sheriff says more
+      good guys with guns are needed
+    postScore: 10
+  - postImage: {fileID: 21300000, guid: 2b3c59c22449a6c4aa1120e8c840c250, type: 3}
+    postTitle: Missile Strikes Kill Dozens, Military response sluggish
+    postScore: 10
