@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 
 public class GameManager : MonoBehaviour
@@ -8,10 +9,13 @@ public class GameManager : MonoBehaviour
     public DoomEventCollection doomEventCollection;
     int currentDoomIndex;
 
-    int doomPoints;
+    [SerializeField] int doomPoints;
+
+    public int DoomScore { get { return doomPoints; } }
 
     public static GameManager instance;
 
+    public UnityEvent<int> onScoreUpdate;
 
 
     private void Awake()
@@ -35,7 +39,8 @@ public class GameManager : MonoBehaviour
 
     public void AddDoomPoints(int points)
     {
-        doomPoints += points;
+        doomPoints = Mathf.Max(doomPoints + points, 0);
+        onScoreUpdate.Invoke(doomPoints);
         if (currentDoomIndex >= doomEventCollection.list.Count) return;
         DoomEventTrigger eventTrigger = doomEventCollection.list[currentDoomIndex];
         if (doomPoints > eventTrigger.triggerAtDoomScore)
@@ -48,6 +53,7 @@ public class GameManager : MonoBehaviour
     public void RemoveDoomPoints(int points)
     {
         doomPoints = Mathf.Max(doomPoints - points, 0);
+        onScoreUpdate.Invoke(doomPoints);
 
         if (currentDoomIndex == 0) return;
 
