@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Rendering;
 
 
 public class GameManager : MonoBehaviour
@@ -17,6 +18,12 @@ public class GameManager : MonoBehaviour
 
     public UnityEvent<int> onScoreUpdate;
 
+    [SerializeField] Volume darknessVolume;
+    [SerializeField] Volume grayscaleVolume;
+
+    [SerializeField] float grayScaleMaxScore = 100f;
+    [SerializeField] float darknessMaxScore = 200f;
+
 
     private void Awake()
     {
@@ -29,6 +36,15 @@ public class GameManager : MonoBehaviour
             Destroy(this.gameObject);
         }
         ResetGame();
+    }
+
+    private void Start()
+    {
+        grayscaleVolume.weight = 0;
+        grayscaleVolume.priority = 0;
+        darknessVolume.weight = 0;
+        darknessVolume.priority = 1;
+        onScoreUpdate.AddListener(OnDoomPointsUpdate);
     }
 
     void ResetGame()
@@ -57,7 +73,7 @@ public class GameManager : MonoBehaviour
 
         if (currentDoomIndex == 0) return;
 
-        DoomEventTrigger eventTrigger = doomEventCollection.list[currentDoomIndex-1];
+        DoomEventTrigger eventTrigger = doomEventCollection.list[currentDoomIndex - 1];
         if (doomPoints < eventTrigger.triggerAtDoomScore)
         {
             eventTrigger.reverseDoomEvent.Invoke();
@@ -65,9 +81,14 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void OnDoomPointsUpdate()
+    void OnDoomPointsUpdate(int doomPoints)
     {
+        LeanTween.value(grayscaleVolume.weight, Mathf.Min(doomPoints / grayScaleMaxScore, 1f), 0.1f)
+            .setOnUpdate((float value) => grayscaleVolume.weight = value);
 
+
+        LeanTween.value(darknessVolume.weight, Mathf.Min(Mathf.Max((doomPoints - grayScaleMaxScore), 0f) / (darknessMaxScore - grayScaleMaxScore), 1f), 0.1f)
+            .setOnUpdate((float value) => darknessVolume.weight = value);
     }
 
     // Update is called once per frame

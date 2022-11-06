@@ -15,5 +15,6 @@ public class DoomScrollPostData
     public Sprite postImage;
     public string postTitle;
     public int postScore = 10;
+    public AudioClip postAudioClip;
 }
 

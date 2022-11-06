@@ -73,7 +73,6 @@ public class PhoneScreenController : MonoBehaviour
     {
         if (prevPost == null) return;
         isScrolling = true;
-        Debug.Log("postHeight " + postHeight);
         Vector3 tmp = currPost.localPosition;
         tmp.y = -postHeight * 1.5f;
         currPost.localPosition = tmp;
@@ -95,7 +94,7 @@ public class PhoneScreenController : MonoBehaviour
     public void GoToNextPost()
     {
         if (isScrolling) return;
-        if (currentPostIndex < postCollection.list.Count)
+        if (currentPostIndex < postCollection.list.Count-1)
         {
             currentPostIndex++;
             LoadPost(currentPostIndex);
@@ -107,6 +106,10 @@ public class PhoneScreenController : MonoBehaviour
     public void PostView()
     {
         GameManager.instance.AddDoomPoints(10);
+        if(postCollection.list[currentPostIndex].postAudioClip != null)
+        {
+            audioSource.PlayOneShot(postCollection.list[currentPostIndex].postAudioClip);
+        }
         currentInteractor.SendHapticImpulse(postHapticIntensity, postHapticDuration);
     }
 
