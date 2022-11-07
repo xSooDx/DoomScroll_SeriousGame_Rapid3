@@ -218,6 +218,7 @@ MonoBehaviour:
     postImage: {fileID: 0}
     postTitle: 
     postScore: 10
+    postAudioClip: {fileID: 0}
   imgComponent: {fileID: 3225398363932111119}
   titleText: {fileID: 1341951971650285282}
   likeText: {fileID: 2276358394197446243}
@@ -885,7 +886,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 13.1
+  m_fontSize: 12.65
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1

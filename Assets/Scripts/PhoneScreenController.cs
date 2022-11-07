@@ -14,6 +14,8 @@ public class PhoneScreenController : MonoBehaviour
     [SerializeField] DoomScrollPost postPrefab;
     [SerializeField] RectTransform content;
     [SerializeField] TextMeshProUGUI scoreText;
+    [SerializeField] RectTransform scoreEffectSpawn;
+    [SerializeField] TextMeshProUGUI scoreTextPrefab;
 
 
     [HideInInspector] public XRBaseControllerInteractor currentInteractor;
@@ -25,6 +27,8 @@ public class PhoneScreenController : MonoBehaviour
     [Range(0, 1f)] public float postHapticDuration = 0.2f;
     [Range(0, 1f)] public float likeHapticDuration = 0.4f;
     [Range(0, 1f)] public float shareHapticDuration = 0.6f;
+
+    public float forwardDistance = 0.1f;
 
     [SerializeField] AudioClip shareSound;
     [SerializeField] AudioClip likeSound;
@@ -76,7 +80,7 @@ public class PhoneScreenController : MonoBehaviour
         Vector3 tmp = currPost.localPosition;
         tmp.y = -postHeight * 1.5f;
         currPost.localPosition = tmp;
-        prevPost.LeanMoveLocalY(postHeight/2, scrollTime)
+        prevPost.LeanMoveLocalY(postHeight / 2, scrollTime)
             .setOnComplete(() =>
                 Destroy(prevPost.gameObject)
             ); ;
@@ -94,21 +98,23 @@ public class PhoneScreenController : MonoBehaviour
     public void GoToNextPost()
     {
         if (isScrolling) return;
-        if (currentPostIndex < postCollection.list.Count-1)
+        if (currentPostIndex < postCollection.list.Count - 1)
         {
             currentPostIndex++;
             LoadPost(currentPostIndex);
             PostView();
         }
-        
+
     }
 
     public void PostView()
     {
-        GameManager.instance.AddDoomPoints(10);
-        if(postCollection.list[currentPostIndex].postAudioClip != null)
+        DoomScrollPostData data = postCollection.list[currentPostIndex];
+        GameManager.instance.AddDoomPoints(data.postScore);
+        SpawnScoreTextEffect(data.postScore);
+        if (data.postAudioClip != null)
         {
-            audioSource.PlayOneShot(postCollection.list[currentPostIndex].postAudioClip);
+            audioSource.PlayOneShot(data.postAudioClip);
         }
         currentInteractor.SendHapticImpulse(postHapticIntensity, postHapticDuration);
     }
@@ -116,30 +122,34 @@ public class PhoneScreenController : MonoBehaviour
     public void PostLike()
     {
         audioSource.PlayOneShot(likeSound);
-        GameManager.instance.AddDoomPoints(25);
+        int score = postCollection.list[currentPostIndex].postScore * 2;
+        GameManager.instance.AddDoomPoints(score);
+        SpawnScoreTextEffect(score);
         currentInteractor.SendHapticImpulse(likeHapticIntensity, likeHapticDuration);
     }
 
     public void PostShare()
     {
         audioSource.PlayOneShot(shareSound);
-        GameManager.instance.AddDoomPoints(50);
+        int score = postCollection.list[currentPostIndex].postScore * 4;
+        GameManager.instance.AddDoomPoints(score);
+        SpawnScoreTextEffect(score);
         currentInteractor.SendHapticImpulse(shareHapticIntensity, shareHapticDuration);
     }
-
-
-
-    void OnScrollEvent(Vector2 pos)
-    {
-
-        Debug.Log("OnScrollEvent " + pos);
-    }
-
 
     public void ActivateInput()
     {
         //XRUIInputModule
         //inputEnabled = true;
+    }
+
+    void SpawnScoreTextEffect(int score)
+    {
+        TextMeshProUGUI text = Instantiate(scoreTextPrefab, scoreEffectSpawn);
+        text.text = "+" + score;
+        text.transform.LeanMoveLocalY(text.transform.position.y + postHeight / 2, 1f);
+        text.transform.LeanMoveLocalZ(text.transform.position.z - postHeight / 2, 1f)
+            .setOnComplete(() => Destroy(text.gameObject));
     }
 
     public void DeactivateInput()

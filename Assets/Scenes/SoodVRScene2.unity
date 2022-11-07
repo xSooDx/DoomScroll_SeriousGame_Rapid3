@@ -191,7 +191,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh34154
+  m_Name: pb_Mesh31190
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2212,12 +2212,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &1068358391 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6031212950816350195, guid: 55c2402ba6f8a7647921a1b1125da34e,
-    type: 3}
-  m_PrefabInstance: {fileID: 7172322829765537558}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1141142722
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2298,7 +2292,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh34200
+  m_Name: pb_Mesh31240
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2576,12 +2570,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1226970973}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &1230760551 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1247161724713855647, guid: 55c2402ba6f8a7647921a1b1125da34e,
-    type: 3}
-  m_PrefabInstance: {fileID: 7172322829765537558}
-  m_PrefabAsset: {fileID: 0}
 --- !u!850595691 &1426071710
 LightingSettings:
   m_ObjectHideFlags: 0
@@ -3374,7 +3362,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorRotateReferenceFrame
       value: 
-      objectReference: {fileID: 1230760551}
+      objectReference: {fileID: 0}
     - target: {fileID: 7172322828274943799, guid: 55c2402ba6f8a7647921a1b1125da34e,
         type: 3}
       propertyPath: m_TagString
@@ -3389,7 +3377,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorRotateReferenceFrame
       value: 
-      objectReference: {fileID: 1068358391}
+      objectReference: {fileID: 0}
     - target: {fileID: 7172322828469277203, guid: 55c2402ba6f8a7647921a1b1125da34e,
         type: 3}
       propertyPath: m_Model
