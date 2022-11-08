@@ -85,28 +85,28 @@ MonoBehaviour:
     postTitle: "Experts Agree: New Vaccine Safe; social media moms fire back with
       their Fooble search results, but who\u2019s REALLY right?"
     postScore: 10
-    postAudioClip: {fileID: 0}
+    postAudioClip: {fileID: 8300000, guid: c646fa97ca14017498a928c9a0149f14, type: 3}
   - postImage: {fileID: 21300000, guid: 93771f3693ab8ca4489a1ae8c48bc3bc, type: 3}
     postTitle: Politician who voted on child protection bill caught masturbating
       in Pre-school parking lot
     postScore: 10
-    postAudioClip: {fileID: 0}
+    postAudioClip: {fileID: 8300000, guid: 2de704e9d7f7e334fb6d275ed7c85b4c, type: 3}
   - postImage: {fileID: 21300000, guid: bb807f99a46748c469ed95a60a76f077, type: 3}
     postTitle: Military now considering edible ammunition in response to metal and
       water shortages
     postScore: 10
-    postAudioClip: {fileID: 0}
+    postAudioClip: {fileID: 8300000, guid: b9dbcd57bfb26714da1b5d8a4095fcf1, type: 3}
   - postImage: {fileID: 21300000, guid: 0d677f83d7e3dc44cb66afd5e0153298, type: 3}
     postTitle: Rampant Forest Fires burn Alt-Right fundamentalist compound in the
       Potatoan wilderness
     postScore: 10
-    postAudioClip: {fileID: 0}
+    postAudioClip: {fileID: 8300000, guid: 1475a9edcf125744aba6d8130e76518e, type: 3}
   - postImage: {fileID: 21300000, guid: 2f96b2d7d7150ec418716b5612994b24, type: 3}
     postTitle: 6 dead, 13 wounded in Middle school Shooting, local Sheriff says more
       good guys with guns are needed
     postScore: 10
-    postAudioClip: {fileID: 0}
+    postAudioClip: {fileID: 8300000, guid: 22353f6d56279644d92986003952484b, type: 3}
   - postImage: {fileID: 21300000, guid: 2b3c59c22449a6c4aa1120e8c840c250, type: 3}
     postTitle: Missile Strikes Kill Dozens, Military response sluggish
     postScore: 10
-    postAudioClip: {fileID: 0}
+    postAudioClip: {fileID: 8300000, guid: 64a455547dea4c843b3817d6217bacb3, type: 3}
