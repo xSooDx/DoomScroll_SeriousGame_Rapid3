@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2412894021054375528}
   - component: {fileID: 9125531849748738070}
   - component: {fileID: 100307166402418164}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 4241271460608601674}
   - component: {fileID: 8569874561908261748}
   - component: {fileID: 1304738750570434892}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BlankScreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -190,7 +190,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6261723290071359555}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: LeftHandPivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -224,7 +224,7 @@ GameObject:
   - component: {fileID: 6261723290218848972}
   - component: {fileID: 6261723290218848973}
   - component: {fileID: 6261723290218848963}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Phone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -281,7 +281,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
   m_Colliders:
-  - {fileID: 0}
+  - {fileID: 1509101475171999744}
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -445,7 +445,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6261723290719662435}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -478,7 +478,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6261723291984509237}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: RightHandPivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -680,6 +680,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8513424388201257645, guid: 2d7979bbbcdc3704f932673f052413a3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: -6067185528594298527, guid: 2d7979bbbcdc3704f932673f052413a3,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -690,6 +695,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Phone
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2d7979bbbcdc3704f932673f052413a3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d7979bbbcdc3704f932673f052413a3, type: 3}
 --- !u!4 &5077825163348329159 stripped
@@ -698,3 +708,22 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 4752061116137841964}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &5563035953588246653 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2d7979bbbcdc3704f932673f052413a3,
+    type: 3}
+  m_PrefabInstance: {fileID: 4752061116137841964}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1509101475171999744
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5563035953588246653}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3, y: 5, z: 2}
+  m_Center: {x: 0, y: 0, z: 0}

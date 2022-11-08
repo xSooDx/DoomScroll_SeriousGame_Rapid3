@@ -98,17 +98,19 @@ public class PhoneScreenController : MonoBehaviour
     public void GoToNextPost()
     {
         if (isScrolling) return;
-        if (currentPostIndex < postCollection.list.Count - 1)
-        {
-            currentPostIndex++;
+        currentPostIndex = (currentPostIndex + 1) % postCollection.list.Count;
+        //if (currentPostIndex < postCollection.list.Count - 1)
+        //{
+            //currentPostIndex++;
             LoadPost(currentPostIndex);
             PostView();
-        }
+        //}
 
     }
 
     public void PostView()
     {
+        Debug.Log("WTf " + currentPostIndex);
         DoomScrollPostData data = postCollection.list[currentPostIndex];
         GameManager.instance.AddDoomPoints(data.postScore);
         SpawnScoreTextEffect(data.postScore);
