@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.5935709, g: 0.5937672, b: 0.59363216, a: 1}
+  m_IndirectSpecularColor: {r: 0.5935713, g: 0.5937676, b: 0.5936328, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -585,6 +585,7 @@ GameObject:
   - component: {fileID: 280053396}
   - component: {fileID: 280053395}
   - component: {fileID: 280053397}
+  - component: {fileID: 280053398}
   m_Layer: 0
   m_Name: Point Light
   m_TagString: Untagged
@@ -689,6 +690,21 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
+--- !u!114 &280053398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 280053394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e7d956f5f8dcda45bc4c3d88dd19b2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startFlickering: 0
+  isFlickering: 0
+  timeDelay: 0
 --- !u!1 &318505120
 GameObject:
   m_ObjectHideFlags: 0
@@ -992,6 +1008,7 @@ GameObject:
   - component: {fileID: 897851494}
   - component: {fileID: 897851493}
   - component: {fileID: 897851495}
+  - component: {fileID: 897851496}
   m_Layer: 0
   m_Name: Point Light (1)
   m_TagString: Untagged
@@ -1096,6 +1113,21 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
+--- !u!114 &897851496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 897851492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e7d956f5f8dcda45bc4c3d88dd19b2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startFlickering: 0
+  isFlickering: 1
+  timeDelay: 0
 --- !u!1 &1226970973
 GameObject:
   m_ObjectHideFlags: 0
