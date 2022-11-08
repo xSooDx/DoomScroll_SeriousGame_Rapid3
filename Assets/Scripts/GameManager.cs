@@ -7,7 +7,7 @@ using UnityEngine.Rendering;
 
 public class GameManager : MonoBehaviour
 {
-    public DoomEventCollection doomEventCollection;
+    public List<DoomEventTrigger> doomEventCollection;
     int currentDoomIndex;
 
     [SerializeField] int doomPoints;
@@ -57,8 +57,8 @@ public class GameManager : MonoBehaviour
     {
         doomPoints = Mathf.Max(doomPoints + points, 0);
         onScoreUpdate.Invoke(doomPoints);
-        if (currentDoomIndex >= doomEventCollection.list.Count) return;
-        DoomEventTrigger eventTrigger = doomEventCollection.list[currentDoomIndex];
+        if (currentDoomIndex >= doomEventCollection.Count) return;
+        DoomEventTrigger eventTrigger = doomEventCollection[currentDoomIndex];
         if (doomPoints > eventTrigger.triggerAtDoomScore)
         {
             eventTrigger.doomEvent.Invoke();
@@ -73,7 +73,7 @@ public class GameManager : MonoBehaviour
 
         if (currentDoomIndex == 0) return;
 
-        DoomEventTrigger eventTrigger = doomEventCollection.list[currentDoomIndex - 1];
+        DoomEventTrigger eventTrigger = doomEventCollection[currentDoomIndex - 1];
         if (doomPoints < eventTrigger.triggerAtDoomScore)
         {
             eventTrigger.reverseDoomEvent.Invoke();

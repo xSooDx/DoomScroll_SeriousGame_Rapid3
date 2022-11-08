@@ -34,6 +34,8 @@ public class PhoneScreenController : MonoBehaviour
     [SerializeField] AudioClip likeSound;
     [SerializeField] AudioSource audioSource;
 
+    Coroutine audioCoroutine = null;
+
     float postHeight;
     int currentPostIndex = 0;
     bool inputEnabled = false;
@@ -44,6 +46,8 @@ public class PhoneScreenController : MonoBehaviour
     bool isScrolling = false;
 
     public float scrollTime = 0.3f;
+
+    public float audioFadeInOutTime = 0.5f;
 
     void Start()
     {
@@ -98,12 +102,13 @@ public class PhoneScreenController : MonoBehaviour
     public void GoToNextPost()
     {
         if (isScrolling) return;
-        if (currentPostIndex < postCollection.list.Count - 1)
-        {
-            currentPostIndex++;
-            LoadPost(currentPostIndex);
-            PostView();
-        }
+        currentPostIndex = (currentPostIndex + 1) % postCollection.list.Count;
+        //if (currentPostIndex < postCollection.list.Count - 1)
+        //{
+        //currentPostIndex++;
+        LoadPost(currentPostIndex);
+        PostView();
+        //}
 
     }
 
@@ -114,7 +119,7 @@ public class PhoneScreenController : MonoBehaviour
         SpawnScoreTextEffect(data.postScore);
         if (data.postAudioClip != null)
         {
-            audioSource.PlayOneShot(data.postAudioClip);
+            audioCoroutine = StartCoroutine(PlaySoundEffect(data.postAudioClip));
         }
         currentInteractor.SendHapticImpulse(postHapticIntensity, postHapticDuration);
     }
@@ -155,6 +160,35 @@ public class PhoneScreenController : MonoBehaviour
     public void DeactivateInput()
     {
         inputEnabled = false;
+    }
+
+    public IEnumerator PlaySoundEffect(AudioClip clip, float targetVolume = 1)
+    {
+        if (audioCoroutine != null)
+        {
+            StopCoroutine(audioCoroutine);
+            audioCoroutine = null;
+        }
+
+        audioSource.Stop();
+        audioSource.clip = clip;
+        audioSource.volume = 0;
+        audioSource.Play();
+        float time = 0;
+        while (time < audioFadeInOutTime)
+        {
+            audioSource.volume = time / audioFadeInOutTime;
+            time += Time.deltaTime;
+            yield return null;
+        }
+
+        yield return new WaitForSeconds(clip.length - audioFadeInOutTime * 2);
+        while (time > 0)
+        {
+            audioSource.volume = time / audioFadeInOutTime;
+            time -= Time.deltaTime;
+            yield return null;
+        }
     }
 
 }

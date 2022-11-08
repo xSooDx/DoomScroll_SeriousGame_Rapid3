@@ -853,7 +853,7 @@ PrefabInstance:
     - target: {fileID: 66467026596524094, guid: 55c2402ba6f8a7647921a1b1125da34e,
         type: 3}
       propertyPath: m_CullingMask.m_Bits
-      value: 34
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 7172322829116916325, guid: 55c2402ba6f8a7647921a1b1125da34e,
         type: 3}
@@ -1438,7 +1438,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh44562
+  m_Name: pb_Mesh31280
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2071,7 +2071,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 653bea4109bed124198e7e469872d2e8, type: 2}
+  - {fileID: 2100000, guid: 0f5ecd2bd3edcd24ea4baee97469d883, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2759,16 +2759,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Phone
-      objectReference: {fileID: 0}
-    - target: {fileID: 9139189919165144722, guid: d18f1843bee4e3e468cc12302f6b28b6,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.0418959
-      objectReference: {fileID: 0}
-    - target: {fileID: 9139189919165144722, guid: d18f1843bee4e3e468cc12302f6b28b6,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.03999316
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d18f1843bee4e3e468cc12302f6b28b6, type: 3}
