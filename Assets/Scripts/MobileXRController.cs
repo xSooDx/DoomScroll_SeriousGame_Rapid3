@@ -10,6 +10,9 @@ public class MobileXRController : MonoBehaviour
     XRGrabInteractable xrInteractable;
     [SerializeField] Transform leftHandGrabPivot;
     [SerializeField] Transform rightHandGrabPivot;
+    [SerializeField] PhoneScreenController phoneScreenController;
+    [SerializeField] GameObject phoneScreen;
+    [SerializeField] GameObject blankScreen;
 
     // Start is called before the first frame update
     private void Awake()
@@ -20,6 +23,7 @@ public class MobileXRController : MonoBehaviour
     void Start()
     {
         xrInteractable.selectEntered.AddListener(OnPickUp);
+        xrInteractable.selectExited.AddListener(OnDrop);
     }
 
 
@@ -42,8 +46,27 @@ public class MobileXRController : MonoBehaviour
         {
             xrInteractable.attachTransform = rightHandGrabPivot;
         }
+        Debug.Log("A");
+        if (arg0.interactorObject is XRBaseControllerInteractor controllerInteractor)
+        {
+            Debug.Log("B");
+            phoneScreenController.currentInteractor = controllerInteractor;
+            //controllerInteractor.SendHapticImpulse(1, 1);
+        }
+        phoneScreen.SetActive(true);
+        blankScreen.SetActive(false);
+    }
 
-        //throw new NotImplementedException();
+    private void OnDrop(SelectExitEventArgs arg0)
+    {
+        if (arg0.interactorObject is XRBaseControllerInteractor controllerInteractor && controllerInteractor == phoneScreenController.currentInteractor)
+        {
+            Debug.Log("B");
+            phoneScreenController.currentInteractor = null;
+            //controllerInteractor.SendHapticImpulse(1, 1);
+            phoneScreen.SetActive(false);
+            blankScreen.SetActive(true);
+        }
     }
 
     public void CorrectPhoneRotationForGrab()
