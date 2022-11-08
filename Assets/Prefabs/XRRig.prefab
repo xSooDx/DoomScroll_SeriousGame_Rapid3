@@ -79,7 +79,7 @@ GameObject:
   - component: {fileID: 7172322828274943797}
   m_Layer: 0
   m_Name: LeftHand Controller
-  m_TagString: Untagged
+  m_TagString: LeftHand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -117,7 +117,8 @@ MonoBehaviour:
   m_EnableInputActions: 1
   m_ModelPrefab: {fileID: 0}
   m_ModelParent: {fileID: 0}
-  m_Model: {fileID: 7172322828274943796}
+  m_Model: {fileID: -8679921383154817045, guid: eddd2ea12913105438eeb4d94ab31b44,
+    type: 3}
   m_AnimateModel: 0
   m_ModelSelectTransition: 
   m_ModelDeSelectTransition: 
@@ -610,7 +611,7 @@ GameObject:
   - component: {fileID: 7172322828469277204}
   m_Layer: 0
   m_Name: RightHand Controller
-  m_TagString: Untagged
+  m_TagString: RightHand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -648,7 +649,8 @@ MonoBehaviour:
   m_EnableInputActions: 1
   m_ModelPrefab: {fileID: 0}
   m_ModelParent: {fileID: 0}
-  m_Model: {fileID: 0}
+  m_Model: {fileID: -8679921383154817045, guid: 1995d418c45e8ad4b947dbe0485b2f2b,
+    type: 3}
   m_AnimateModel: 0
   m_ModelSelectTransition: 
   m_ModelDeSelectTransition: 
@@ -1139,6 +1141,8 @@ GameObject:
   - component: {fileID: 7172322829116916324}
   - component: {fileID: 7172322829116916323}
   - component: {fileID: 7172322829116916320}
+  - component: {fileID: 7172322829765537560}
+  - component: {fileID: 7172322829765537569}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1303,6 +1307,56 @@ MonoBehaviour:
     m_SingletonActionBindings: []
     m_Flags: 0
   m_HasMigratedActions: 1
+--- !u!114 &7172322829765537560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7172322829116916327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 1
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
+--- !u!114 &7172322829765537569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7172322829116916327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 029e2bf37d0154742ad62b19a2d9f303, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thickness: 0.01
+  tolerance: 0.01
+  outlineColor: {r: 0, g: 0, b: 0, a: 1}
+  highQuality: 0
+  edgeDetection: 0
 --- !u!1 &7172322829789339297
 GameObject:
   m_ObjectHideFlags: 0
@@ -1378,6 +1432,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7172322829803294353}
+  - component: {fileID: 1165573925}
   m_Layer: 0
   m_Name: Camera Offset
   m_TagString: Untagged
@@ -1403,6 +1458,23 @@ Transform:
   m_Father: {fileID: 7172322829789339311}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1165573925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7172322829803294352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 029e2bf37d0154742ad62b19a2d9f303, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thickness: 0.01
+  tolerance: 0.01
+  outlineColor: {r: 0, g: 0, b: 0, a: 1}
+  highQuality: 0
+  edgeDetection: 0
 --- !u!1 &7172322829833023189
 GameObject:
   m_ObjectHideFlags: 0
@@ -1413,6 +1485,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7172322829833023187}
   - component: {fileID: 7172322829833023186}
+  - component: {fileID: 143043366}
   m_Layer: 0
   m_Name: XRPlatformControllerSetup
   m_TagString: Untagged
@@ -1451,6 +1524,23 @@ MonoBehaviour:
   m_RightController: {fileID: 7172322828469277206}
   m_LeftControllerOculusPackage: {fileID: 7172322828274943799}
   m_RightControllerOculusPackage: {fileID: 7172322828469277206}
+--- !u!114 &143043366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7172322829833023189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 029e2bf37d0154742ad62b19a2d9f303, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thickness: 0.01
+  tolerance: 0.01
+  outlineColor: {r: 0, g: 0, b: 0, a: 1}
+  highQuality: 0
+  edgeDetection: 0
 --- !u!1001 &1907900136968993417
 PrefabInstance:
   m_ObjectHideFlags: 0
