@@ -965,6 +965,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 66467026596524094, guid: 55c2402ba6f8a7647921a1b1125da34e,
+        type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 7172322829116916325, guid: 55c2402ba6f8a7647921a1b1125da34e,
+        type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 87
+      objectReference: {fileID: 0}
+    - target: {fileID: 7172322829765537560, guid: 55c2402ba6f8a7647921a1b1125da34e,
+        type: 3}
+      propertyPath: m_Cameras.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7172322829765537560, guid: 55c2402ba6f8a7647921a1b1125da34e,
+        type: 3}
+      propertyPath: m_Cameras.Array.data[0]
+      value: 
+      objectReference: {fileID: 534652784}
     - target: {fileID: 7172322829789339297, guid: 55c2402ba6f8a7647921a1b1125da34e,
         type: 3}
       propertyPath: m_Name
@@ -1025,8 +1045,24 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8800891961162278655, guid: 55c2402ba6f8a7647921a1b1125da34e,
+        type: 3}
+      propertyPath: m_CameraType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8800891961162278655, guid: 55c2402ba6f8a7647921a1b1125da34e,
+        type: 3}
+      propertyPath: m_RenderShadows
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55c2402ba6f8a7647921a1b1125da34e, type: 3}
+--- !u!20 &534652784 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 66467026596524094, guid: 55c2402ba6f8a7647921a1b1125da34e,
+    type: 3}
+  m_PrefabInstance: {fileID: 534652783}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &706906457 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1656947466485639222, guid: c69c580ff085d1840a7dcff26ecde8b9,
