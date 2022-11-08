@@ -16,71 +16,71 @@ MonoBehaviour:
   - postImage: {fileID: 21300000, guid: ac721906c57a44443878958966f0bce5, type: 3}
     postTitle: Karen spotted impersonating a Buckfarts manager
     postScore: 10
-    postAudioClip: {fileID: 0}
+    postAudioClip: {fileID: 8300000, guid: 23d4fadd422a68544b07eaa5aa2451d6, type: 3}
   - postImage: {fileID: 21300000, guid: 5f3801daf09e97b4490668f881c5f2e4, type: 3}
     postTitle: "Top Snypto-currency investors: \u2018The Best is Yet to Come\u2019
       for unregulated digital currencies"
     postScore: 10
-    postAudioClip: {fileID: 0}
+    postAudioClip: {fileID: 8300000, guid: 0c4c4aa763bed9a479c89ca5906d4e04, type: 3}
   - postImage: {fileID: 21300000, guid: 57589b0e45cb24e49b685ce28c3a15c7, type: 3}
     postTitle: Oil Spill off the Goof Coast set ablaze during gender-reveal party
       - 4 Dead 69 Injured
     postScore: 10
-    postAudioClip: {fileID: 8300000, guid: 31a9487b2d90c134da9a34162f28f7cf, type: 3}
+    postAudioClip: {fileID: 8300000, guid: a0649c16ee20e5e4cb91a14731c273e0, type: 3}
   - postImage: {fileID: 21300000, guid: 6a108649f455b3644b974f1ae7e20bbf, type: 3}
     postTitle: "Controversial Musician declares himself God of a religion; its leaders
       response: \u201CDoes this mean his shoes will be cheaper?"
     postScore: 10
-    postAudioClip: {fileID: 0}
+    postAudioClip: {fileID: 8300000, guid: 59ba658e698865540aeb929c5db9308e, type: 3}
   - postImage: {fileID: 21300000, guid: c61c37cad04c49e43b884d21abc08a5c, type: 3}
-    postTitle: Peace talks break down, Premier Korbyenko vows increased military
+    postTitle: Peace talks break down, Premier Korbynokov vows increased military
       action against the United Regions
     postScore: 10
-    postAudioClip: {fileID: 0}
+    postAudioClip: {fileID: 8300000, guid: 002c842195781f741b1819337da9dee2, type: 3}
   - postImage: {fileID: 21300000, guid: 63645e573304f144285e6f8721cba8ba, type: 3}
     postTitle: "Father of Four Kills Entire Family in new trend that\u2019s taking
       social media by storm"
     postScore: 10
-    postAudioClip: {fileID: 8300000, guid: 4e954a58fa2ca2148868109ab2baa974, type: 3}
+    postAudioClip: {fileID: 8300000, guid: 3ededb130d1fbf244a3cf0392aebcb5c, type: 3}
   - postImage: {fileID: 21300000, guid: f0d3b4ae140243e4ea5c21f5935d6d2c, type: 3}
     postTitle: Environment Advocate announces month-long global tour via private
       jet
     postScore: 10
-    postAudioClip: {fileID: 0}
+    postAudioClip: {fileID: 8300000, guid: ad83c9e47df7ed84c97b44b4b993643c, type: 3}
   - postImage: {fileID: 21300000, guid: 4bc54f8aca1a8b0409c055406da06415, type: 3}
     postTitle: 'Data Analysts and Sociologists agree: social media engagement sucks
       less than real life'
     postScore: 10
-    postAudioClip: {fileID: 0}
+    postAudioClip: {fileID: 8300000, guid: a3586ba6b7da79345b17acc143f2645d, type: 3}
   - postImage: {fileID: 21300000, guid: 181c580bdf2ea444aa692b16d648aed1, type: 3}
     postTitle: "Deplorida Man Marries Alligator, sues for half of clutch in divorce
       after new spouse refuses to let him \u2018crash in her mud den"
     postScore: 10
-    postAudioClip: {fileID: 0}
+    postAudioClip: {fileID: 8300000, guid: 674e6024f9bfd6c45bce020ff5e31c20, type: 3}
   - postImage: {fileID: 21300000, guid: 845e91c131fa7bb478143722d612d3b4, type: 3}
     postTitle: "Student Loan Forgiveness Package Shot Down in Supreme Court Ruling:
       \u2018I had to pay mine back\u2019 argues former collegiate boofing champion,
       Judge Chet Canvahaw"
     postScore: 10
-    postAudioClip: {fileID: 0}
+    postAudioClip: {fileID: 8300000, guid: 997c0039e3bde3d4fa1c6e74e1e42095, type: 3}
   - postImage: {fileID: 21300000, guid: eeb6bc1e0a855bf4fbc5b0209b0b4686, type: 3}
     postTitle: "Why do your friends have amazing lives, but yours sucks? Spoiler
       Alert, it\u2019s because you are a fucking looser!"
     postScore: 10
-    postAudioClip: {fileID: 0}
+    postAudioClip: {fileID: 8300000, guid: c3f244cff4a06524c8eb95b7d72b5378, type: 3}
   - postImage: {fileID: 21300000, guid: 02ff481f01f914d43b37752e36e98fc0, type: 3}
     postTitle: Ice Caps Shrink to twenty percent, luxury yacht sales skyrocket
     postScore: 10
-    postAudioClip: {fileID: 0}
+    postAudioClip: {fileID: 8300000, guid: b23bf06af84264845958ae5c8f7886cc, type: 3}
   - postImage: {fileID: 21300000, guid: fa3e55007b743e0429920c5d16fd2a76, type: 3}
     postTitle: "Hero-Cola execs consider going back to \u2018Classic Recipe\u2019
       amid plummeting sales numbers"
     postScore: 10
-    postAudioClip: {fileID: 0}
+    postAudioClip: {fileID: 8300000, guid: df515754c79117243b0cf12d93e13d16, type: 3}
   - postImage: {fileID: 21300000, guid: 93fcd9b14bd0a54428563a0b21727d2f, type: 3}
     postTitle: 'New Industry Study: Micro-plastics good for your body AND the environment'
     postScore: 10
-    postAudioClip: {fileID: 0}
+    postAudioClip: {fileID: 8300000, guid: ac6a0409e994ca944a6aa800253b0d7d, type: 3}
   - postImage: {fileID: 21300000, guid: 2c1bcd89da0409a48a1f396cab0e1c5d, type: 3}
     postTitle: "Experts Agree: New Vaccine Safe; social media moms fire back with
       their Fooble search results, but who\u2019s REALLY right?"
