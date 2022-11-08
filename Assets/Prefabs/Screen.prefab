@@ -1788,7 +1788,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6110334821734517179
 Transform:
   m_ObjectHideFlags: 0
@@ -1838,6 +1838,7 @@ MonoBehaviour:
   likeSound: {fileID: 8300000, guid: c799710cc1324fb41b8053a203dc0a7f, type: 3}
   audioSource: {fileID: 2018112563801512043}
   scrollTime: 0.3
+  audioFadeInOutTime: 0.3
 --- !u!82 &2018112563801512043
 AudioSource:
   m_ObjectHideFlags: 0
