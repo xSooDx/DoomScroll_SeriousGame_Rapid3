@@ -1086,21 +1086,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4082685177269154126, guid: 2fcabdd29ce90ab419f9bfc97184ca44,
         type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.10267551
-      objectReference: {fileID: 0}
-    - target: {fileID: 4082685177269154126, guid: 2fcabdd29ce90ab419f9bfc97184ca44,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.0951648
-      objectReference: {fileID: 0}
-    - target: {fileID: 4082685177269154126, guid: 2fcabdd29ce90ab419f9bfc97184ca44,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.2549741
-      objectReference: {fileID: 0}
-    - target: {fileID: 4082685177269154126, guid: 2fcabdd29ce90ab419f9bfc97184ca44,
-        type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.241
       objectReference: {fileID: 0}
@@ -1148,6 +1133,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4361914865320980794, guid: 2fcabdd29ce90ab419f9bfc97184ca44,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 12e35a8920cebdc418a9e1c21af36388, type: 2}
+    - target: {fileID: 8561673348642497642, guid: 2fcabdd29ce90ab419f9bfc97184ca44,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561673348642497642, guid: 2fcabdd29ce90ab419f9bfc97184ca44,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.28
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fcabdd29ce90ab419f9bfc97184ca44, type: 3}
@@ -1408,6 +1408,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2012758246, guid: b4a3479bae417d44e8c81219593d67bb, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2012758246, guid: b4a3479bae417d44e8c81219593d67bb, type: 3}
+      propertyPath: m_Volume
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2012758246, guid: b4a3479bae417d44e8c81219593d67bb, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 22b79f09e34d5dd4983a2fdabc38f511, type: 3}
+    - target: {fileID: 2012758246, guid: b4a3479bae417d44e8c81219593d67bb, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2584169807779272826, guid: b4a3479bae417d44e8c81219593d67bb,
         type: 3}
       propertyPath: m_RootOrder
@@ -1466,167 +1482,67 @@ PrefabInstance:
     - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
         type: 3}
       propertyPath: darknessMaxScore
-      value: 300
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
         type: 3}
       propertyPath: grayScaleMaxScore
-      value: 150
-      objectReference: {fileID: 0}
-    - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
-        type: 3}
-      propertyPath: doomEventCollection.Array.size
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
-        type: 3}
-      propertyPath: onScoreUpdate.m_PersistentCalls.m_Calls.Array.size
-      value: 0
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
         type: 3}
       propertyPath: doomEventCollection.Array.data[0].triggerAtDoomScore
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
-        type: 3}
-      propertyPath: doomEventCollection.Array.data[1].triggerAtDoomScore
       value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
         type: 3}
+      propertyPath: doomEventCollection.Array.data[1].triggerAtDoomScore
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
+        type: 3}
       propertyPath: doomEventCollection.Array.data[2].triggerAtDoomScore
-      value: 70
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
         type: 3}
       propertyPath: doomEventCollection.Array.data[3].triggerAtDoomScore
-      value: 90
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
         type: 3}
       propertyPath: doomEventCollection.Array.data[4].triggerAtDoomScore
-      value: 110
-      objectReference: {fileID: 0}
-    - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
-        type: 3}
-      propertyPath: doomEventCollection.Array.data[5].triggerAtDoomScore
-      value: 130
-      objectReference: {fileID: 0}
-    - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
-        type: 3}
-      propertyPath: doomEventCollection.Array.data[6].triggerAtDoomScore
       value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
         type: 3}
-      propertyPath: doomEventCollection.Array.data[7].triggerAtDoomScore
+      propertyPath: doomEventCollection.Array.data[5].triggerAtDoomScore
       value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
         type: 3}
-      propertyPath: onScoreUpdate.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+      propertyPath: doomEventCollection.Array.data[6].triggerAtDoomScore
+      value: 210
       objectReference: {fileID: 0}
     - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
         type: 3}
-      propertyPath: onScoreUpdate.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1904528013}
-    - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
-        type: 3}
-      propertyPath: onScoreUpdate.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
-        type: 3}
-      propertyPath: onScoreUpdate.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: StartFlicker
-      objectReference: {fileID: 0}
-    - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
-        type: 3}
-      propertyPath: onScoreUpdate.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: FlickerLigths, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
-        type: 3}
-      propertyPath: doomEventCollection.Array.data[0].doomEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
-        type: 3}
-      propertyPath: doomEventCollection.Array.data[1].doomEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
-        type: 3}
-      propertyPath: doomEventCollection.Array.data[2].doomEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
-        type: 3}
-      propertyPath: doomEventCollection.Array.data[3].doomEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
-        type: 3}
-      propertyPath: doomEventCollection.Array.data[4].doomEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
-        type: 3}
-      propertyPath: doomEventCollection.Array.data[5].doomEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
-        type: 3}
-      propertyPath: doomEventCollection.Array.data[6].doomEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
-        type: 3}
-      propertyPath: doomEventCollection.Array.data[7].doomEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
-        type: 3}
-      propertyPath: doomEventCollection.Array.data[5].reverseDoomEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
-        type: 3}
-      propertyPath: doomEventCollection.Array.data[6].reverseDoomEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
-        type: 3}
-      propertyPath: doomEventCollection.Array.data[0].doomEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
-        type: 3}
-      propertyPath: doomEventCollection.Array.data[1].doomEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+      propertyPath: doomEventCollection.Array.data[7].triggerAtDoomScore
+      value: 240
       objectReference: {fileID: 0}
     - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
         type: 3}
       propertyPath: doomEventCollection.Array.data[2].doomEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
         type: 3}
       propertyPath: doomEventCollection.Array.data[3].doomEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
-        type: 3}
-      propertyPath: doomEventCollection.Array.data[4].doomEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
         type: 3}
       propertyPath: doomEventCollection.Array.data[5].doomEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
         type: 3}
@@ -1636,33 +1552,33 @@ PrefabInstance:
     - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
         type: 3}
       propertyPath: doomEventCollection.Array.data[7].doomEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
         type: 3}
       propertyPath: doomEventCollection.Array.data[0].doomEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1904528013}
+      objectReference: {fileID: 6131807328122073674}
     - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
         type: 3}
       propertyPath: doomEventCollection.Array.data[1].doomEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 6131807328122073674}
+      objectReference: {fileID: 1904528013}
     - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
         type: 3}
       propertyPath: doomEventCollection.Array.data[2].doomEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1904528013}
+      objectReference: {fileID: 1827836722}
     - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
         type: 3}
       propertyPath: doomEventCollection.Array.data[3].doomEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 871474761}
+      objectReference: {fileID: 1904528013}
     - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
         type: 3}
       propertyPath: doomEventCollection.Array.data[4].doomEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1827836722}
+      objectReference: {fileID: 1994323577}
     - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
         type: 3}
       propertyPath: doomEventCollection.Array.data[5].doomEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1672,71 +1588,31 @@ PrefabInstance:
         type: 3}
       propertyPath: doomEventCollection.Array.data[6].doomEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1994323577}
+      objectReference: {fileID: 1436887228}
     - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
         type: 3}
       propertyPath: doomEventCollection.Array.data[7].doomEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1436887228}
-    - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
-        type: 3}
-      propertyPath: doomEventCollection.Array.data[0].doomEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
-        type: 3}
-      propertyPath: doomEventCollection.Array.data[1].doomEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
-        type: 3}
-      propertyPath: doomEventCollection.Array.data[2].doomEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
-        type: 3}
-      propertyPath: doomEventCollection.Array.data[3].doomEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
-        type: 3}
-      propertyPath: doomEventCollection.Array.data[4].doomEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
-        type: 3}
-      propertyPath: doomEventCollection.Array.data[5].doomEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
-        type: 3}
-      propertyPath: doomEventCollection.Array.data[6].doomEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
-        type: 3}
-      propertyPath: doomEventCollection.Array.data[7].doomEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 871474761}
     - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
         type: 3}
       propertyPath: doomEventCollection.Array.data[0].doomEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: StartFlicker
-      objectReference: {fileID: 0}
-    - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
-        type: 3}
-      propertyPath: doomEventCollection.Array.data[1].doomEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: PushFrame
       objectReference: {fileID: 0}
     - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
         type: 3}
+      propertyPath: doomEventCollection.Array.data[1].doomEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartFlicker
+      objectReference: {fileID: 0}
+    - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
+        type: 3}
       propertyPath: doomEventCollection.Array.data[2].doomEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: StopFlicering
+      value: PushFrame
       objectReference: {fileID: 0}
     - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
         type: 3}
       propertyPath: doomEventCollection.Array.data[3].doomEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: StartFlicker
+      value: StopFlicering
       objectReference: {fileID: 0}
     - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
         type: 3}
@@ -1746,7 +1622,7 @@ PrefabInstance:
     - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
         type: 3}
       propertyPath: doomEventCollection.Array.data[5].doomEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: StopFlicering
+      value: StartFlicker
       objectReference: {fileID: 0}
     - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
         type: 3}
@@ -1756,72 +1632,27 @@ PrefabInstance:
     - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
         type: 3}
       propertyPath: doomEventCollection.Array.data[7].doomEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PushFrame
-      objectReference: {fileID: 0}
-    - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
-        type: 3}
-      propertyPath: doomEventCollection.Array.data[5].reverseDoomEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
-        type: 3}
-      propertyPath: doomEventCollection.Array.data[6].reverseDoomEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
-        type: 3}
-      propertyPath: onScoreUpdate.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
-        type: 3}
-      propertyPath: doomEventCollection.Array.data[5].reverseDoomEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1994323577}
-    - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
-        type: 3}
-      propertyPath: doomEventCollection.Array.data[5].reverseDoomEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
-        type: 3}
-      propertyPath: doomEventCollection.Array.data[6].reverseDoomEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
-        type: 3}
-      propertyPath: doomEventCollection.Array.data[5].reverseDoomEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PushFrame
+      value: StopFlicering
       objectReference: {fileID: 0}
     - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
         type: 3}
       propertyPath: doomEventCollection.Array.data[0].doomEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: FlickerLigths, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
-        type: 3}
-      propertyPath: doomEventCollection.Array.data[1].doomEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: PicFrame, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
         type: 3}
-      propertyPath: doomEventCollection.Array.data[2].doomEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      propertyPath: doomEventCollection.Array.data[1].doomEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: FlickerLigths, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
         type: 3}
-      propertyPath: doomEventCollection.Array.data[3].doomEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: FlickerLigths, Assembly-CSharp
+      propertyPath: doomEventCollection.Array.data[2].doomEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PicFrame, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
         type: 3}
       propertyPath: doomEventCollection.Array.data[4].doomEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: PicFrame, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
-        type: 3}
-      propertyPath: doomEventCollection.Array.data[5].doomEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: FlickerLigths, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
         type: 3}
@@ -1831,57 +1662,7 @@ PrefabInstance:
     - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
         type: 3}
       propertyPath: doomEventCollection.Array.data[7].doomEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: PicFrame, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
-        type: 3}
-      propertyPath: doomEventCollection.Array.data[5].reverseDoomEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: PicFrame, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
-        type: 3}
-      propertyPath: doomEventCollection.Array.data[0].doomEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
-        type: 3}
-      propertyPath: doomEventCollection.Array.data[1].doomEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
-        type: 3}
-      propertyPath: doomEventCollection.Array.data[2].doomEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
-        type: 3}
-      propertyPath: doomEventCollection.Array.data[3].doomEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
-        type: 3}
-      propertyPath: doomEventCollection.Array.data[4].doomEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
-        type: 3}
-      propertyPath: doomEventCollection.Array.data[5].doomEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
-        type: 3}
-      propertyPath: doomEventCollection.Array.data[6].doomEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
-        type: 3}
-      propertyPath: doomEventCollection.Array.data[7].doomEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4277396111975489729, guid: b4a3479bae417d44e8c81219593d67bb,
-        type: 3}
-      propertyPath: doomEventCollection.Array.data[5].reverseDoomEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+      value: FlickerLigths, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 5690940745221721016, guid: b4a3479bae417d44e8c81219593d67bb,
         type: 3}
