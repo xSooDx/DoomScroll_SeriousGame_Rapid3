@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
-[RequireComponent(typeof(XRGrabInteractable))]
+[RequireComponent(typeof(XRGrabInteractable), typeof(Rigidbody))]
 public class MobileXRController : MonoBehaviour
 {
     XRGrabInteractable xrInteractable;
@@ -13,11 +13,13 @@ public class MobileXRController : MonoBehaviour
     [SerializeField] PhoneScreenController phoneScreenController;
     [SerializeField] GameObject phoneScreen;
     [SerializeField] GameObject blankScreen;
+    [SerializeField] Rigidbody rb;
 
     // Start is called before the first frame update
     private void Awake()
     {
         xrInteractable = GetComponent<XRGrabInteractable>();
+        rb = GetComponent<Rigidbody>();
     }
 
     void Start()
@@ -36,7 +38,7 @@ public class MobileXRController : MonoBehaviour
 
     private void OnPickUp(SelectEnterEventArgs arg0)
     {
-
+        rb.isKinematic = false;
         Debug.Log("OnPickup " + arg0.interactorObject.transform.tag);
         if (arg0.interactorObject.transform.CompareTag("LeftHand"))
         {
@@ -67,6 +69,7 @@ public class MobileXRController : MonoBehaviour
             phoneScreen.SetActive(false);
             blankScreen.SetActive(true);
         }
+        rb.isKinematic = false;
     }
 
     public void CorrectPhoneRotationForGrab()

@@ -2,30 +2,51 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Light))]
 public class FlickerLigths : MonoBehaviour
 {
-    public bool startFlickering = false;
-    public bool isFlickering = false;
-    public float timeDelay;
+    public float minFlickerTime = 0.1f;
+    public float maxFlickerTime = 0.3f;
 
-    // Update is called once per frame
-    void Update()
+    Coroutine flickering = null;
+
+    float timeDelay;
+
+    Light myLight;
+
+    private void Start()
     {
-        if (startFlickering == true)
-        {
-            StartCoroutine(FlickeringLight());
-
-        }
+        myLight = GetComponent<Light>();
     }
+
+
+    public void StartFlicker()
+    {
+        StopFlicering(true);
+        flickering = StartCoroutine(FlickeringLight());
+    }
+
+    public void StopFlicering(bool lightOn)
+    {
+        if(flickering != null)
+        {
+            StopCoroutine(flickering);
+            flickering = null;
+        }
+        myLight.enabled = lightOn;
+    }
+
+
     IEnumerator FlickeringLight()
     {
-        isFlickering = true;
-        this.gameObject.GetComponent<Light>().enabled = false;
-        timeDelay = Random.Range(0.01f, 0.2f);
-        yield return new WaitForSeconds(timeDelay);
-        this.gameObject.GetComponent<Light>().enabled = true;
-        timeDelay = Random.Range(0.01f, 0.2f);
-        yield return new WaitForSeconds(timeDelay);
-        isFlickering = false;
+        while (true)
+        {
+            myLight.enabled = false;
+            timeDelay = Random.Range(minFlickerTime, maxFlickerTime);
+            yield return new WaitForSeconds(timeDelay);
+            myLight.enabled = true;
+            timeDelay = Random.Range(minFlickerTime, maxFlickerTime);
+            yield return new WaitForSeconds(timeDelay);
+        }
     }
 }

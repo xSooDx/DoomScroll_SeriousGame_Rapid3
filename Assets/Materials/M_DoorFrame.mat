@@ -1,5 +1,18 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-3819304952359034122
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 5
 --- !u!21 &2100000
 Material:
   serializedVersion: 8
@@ -8,7 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: M_DoorFrame
-  m_Shader: {fileID: 4800000, guid: 60e29b7951f20da47b11861d166b7036, type: 3}
+  m_Shader: {fileID: 4800000, guid: 83cfbf6eb0f91164ebd16d33d011ff8e, type: 3}
   m_ValidKeywords:
   - _OUTLINETYPE_NORMAL
   - _OVERLAYMODE1_NONE
@@ -16,10 +29,12 @@ Material:
   - _RIMSPLITCOLOR_NOSPLIT
   - _USEADDITIONALLIGHTSDIFFUSE_ON
   - _USEHATCHINGCONSTANTSCALE_ON
-  - _USELIGHTRAMP_STEP
+  - _USELIGHTRAMP_POSTERIZE
+  - _USEOUTLINE_ON
   - _USEPURESKETCH_ON
   - _USESPECULAR_ON
-  m_InvalidKeywords: []
+  m_InvalidKeywords:
+  - _USEDIFFUSEWARP_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -29,19 +44,7 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _BasicSubGraph_2c3fa9afad204083bcb90bf992b4ee17_Texture2D314F850_1413273210:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _BasicSubGraph_809418181719048dacfd28e81de85bfd_Texture2D314F850_1413273210:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Custom_Point:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -86,7 +89,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 2e632cba1a259944788734d4f3d47576, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -95,8 +98,8 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
         m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
+        m_Scale: {x: 25, y: 12}
+        m_Offset: {x: 0.24, y: 0}
     - _PaperTexture:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -110,7 +113,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecularMaskTexture:
-        m_Texture: {fileID: 2800000, guid: 0c021cea0cf2417459ce7fa844118e17, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Texture2D_Main:
@@ -137,7 +140,7 @@ Material:
     m_Floats:
     - _AdaptiveThicnkess: 0
     - _AdditionalLightsAmount: 1
-    - _AdditionalLightsFaloff: 1
+    - _AdditionalLightsFaloff: 0
     - _AdditionalLightsIntesity: 1
     - _AdditionalLightsSmoothnessMultiplier: 1
     - _AlphaCutoff: 0.5
@@ -148,12 +151,12 @@ Material:
     - _BumpScale: 1
     - _Custom_Point_: 0
     - _CutAngle: 0.1
-    - _Cutoff: 0.5
+    - _Cutoff: 0.637
     - _Darken: 0
     - _DetailNormalMapScale: 1
-    - _DiffusePosterizeOffset: 0
-    - _DiffusePosterizePower: 1
-    - _DiffusePosterizeSteps: 3
+    - _DiffusePosterizeOffset: -0.5
+    - _DiffusePosterizePower: 0.5
+    - _DiffusePosterizeSteps: 10
     - _DiffuseWarpAffectHalftone: 0
     - _DiffuseWarpBrightnessOffset: 1.12
     - _DstBlend: 0
@@ -166,7 +169,7 @@ Material:
     - _HalftoneToonAffect: 0
     - _HaltonePatternSize: 0
     - _IndirectLightAffectOnHatch: 0
-    - _IndirectLightStrength: 1
+    - _IndirectLightStrength: 0.703
     - _InverseMask: 0
     - _LightRampOffset: 0
     - _Lighten: 0
@@ -196,7 +199,6 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _RampDiffuseTextureLoaded: 1
-    - _Ramp_Effect: 1
     - _RimPower: 12
     - _RimSmoothness: 0
     - _RimSplitColor: 0
@@ -208,7 +210,7 @@ Material:
     - _SideShineHardness: 0
     - _SideShineIntensity: 1
     - _SmoothnessMultiplier: 1
-    - _SmoothnessTextureChannel: 0
+    - _SmoothnessTextureChannel: 1
     - _SpecularFaloff: 0
     - _SpecularHighlights: 1
     - _SpecularMaskRotation: 0
@@ -217,7 +219,6 @@ Material:
     - _SpecularPosterizeSteps: 15
     - _SpecularShadowMask: 0
     - _SrcBlend: 1
-    - _Static_Shadow_: 0
     - _StepHalftoneTexture: 0
     - _StepOffset: 0
     - _Strength: 0
@@ -237,14 +238,14 @@ Material:
     - _UseAdaptiveUvsSpecular: 0
     - _UseAdditionalLightsDiffuse: 1
     - _UseBacklight: 0
-    - _UseDiffuseWarp: 0
+    - _UseDiffuseWarp: 1
     - _UseDiffuseWarpAsOverlay: 0
     - _UseDynamicOutline: 0
     - _UseEmission: 0
     - _UseEnvironmentRefletion: 0
     - _UseHatchingConstantScale: 1
-    - _UseLightRamp: 0
-    - _UseOutline: 0
+    - _UseLightRamp: 2
+    - _UseOutline: 1
     - _UsePureSketch: 1
     - _UseRimLight: 0
     - _UseScreenUvs: 0
@@ -252,16 +253,15 @@ Material:
     - _UseScreenUvsWarp: 0
     - _UseSpecular: 1
     - _UseSpecularMask: 0
-    - _Vector1_Power: 1
     - _Vector1_smoothness: 0
-    - _WarpStrength: 0
+    - _WarpStrength: 1
     - _WarpTextureRotation: 0
     - _WarpTextureScale: 1
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.16981131, g: 0.107603215, b: 0, a: 1}
-    - _Color_Rim: {r: 0.31132078, g: 0.08094696, b: 0.022516886, a: 0}
-    - _Color_Texture: {r: 0.1981132, g: 0.06626206, b: 0, a: 0}
+    - _Color: {r: 1, g: 0.010436694, b: 0, a: 1}
+    - _Color_Rim: {r: 1, g: 1, b: 1, a: 0}
+    - _Color_Texture: {r: 1, g: 1, b: 1, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _HalftoneColor: {r: 0, g: 0, b: 0, a: 1}
     - _HatchingColor: {r: 0, g: 0, b: 0, a: 1}
@@ -269,20 +269,6 @@ Material:
     - _Outline_Color: {r: 0.09433961, g: 0.09300461, b: 0.09300461, a: 0}
     - _RimColor: {r: 1, g: 1, b: 1, a: 0}
     - _RimShadowColor: {r: 0, g: 0.055514283, b: 0.9622641, a: 0}
-    - _ShadowColor: {r: 0.7254902, g: 0.7254902, b: 0.7254902, a: 0}
-    - _Shadow_Position: {r: -17, g: -13, b: -9, a: 0}
+    - _ShadowColor: {r: 0, g: 0, b: 0, a: 0}
     - _SpecColor: {r: 1, g: 1, b: 1, a: 0}
   m_BuildTextureStacks: []
---- !u!114 &8831003637685285974
-MonoBehaviour:
-  m_ObjectHideFlags: 11
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  version: 5

@@ -7,7 +7,7 @@ using UnityEngine.Rendering;
 
 public class GameManager : MonoBehaviour
 {
-    public DoomEventCollection doomEventCollection;
+    public List<DoomEventTrigger> doomEventCollection;
     int currentDoomIndex;
 
     [SerializeField] int doomPoints;
@@ -24,6 +24,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] float grayScaleMaxScore = 100f;
     [SerializeField] float darknessMaxScore = 200f;
 
+    [SerializeField] AudioSource bgAudio;
+
 
     private void Awake()
     {
@@ -34,8 +36,10 @@ public class GameManager : MonoBehaviour
         else
         {
             Destroy(this.gameObject);
+            return;
         }
         ResetGame();
+
     }
 
     private void Start()
@@ -45,20 +49,22 @@ public class GameManager : MonoBehaviour
         darknessVolume.weight = 0;
         darknessVolume.priority = 1;
         onScoreUpdate.AddListener(OnDoomPointsUpdate);
+
     }
 
-    void ResetGame()
+    public void ResetGame()
     {
         currentDoomIndex = 0;
         doomPoints = 0;
+        bgAudio.volume = 0;
     }
 
     public void AddDoomPoints(int points)
     {
         doomPoints = Mathf.Max(doomPoints + points, 0);
         onScoreUpdate.Invoke(doomPoints);
-        if (currentDoomIndex >= doomEventCollection.list.Count) return;
-        DoomEventTrigger eventTrigger = doomEventCollection.list[currentDoomIndex];
+        if (currentDoomIndex >= doomEventCollection.Count) return;
+        DoomEventTrigger eventTrigger = doomEventCollection[currentDoomIndex];
         if (doomPoints > eventTrigger.triggerAtDoomScore)
         {
             eventTrigger.doomEvent.Invoke();
@@ -73,7 +79,7 @@ public class GameManager : MonoBehaviour
 
         if (currentDoomIndex == 0) return;
 
-        DoomEventTrigger eventTrigger = doomEventCollection.list[currentDoomIndex - 1];
+        DoomEventTrigger eventTrigger = doomEventCollection[currentDoomIndex - 1];
         if (doomPoints < eventTrigger.triggerAtDoomScore)
         {
             eventTrigger.reverseDoomEvent.Invoke();
@@ -89,6 +95,13 @@ public class GameManager : MonoBehaviour
 
         LeanTween.value(darknessVolume.weight, Mathf.Min(Mathf.Max((doomPoints - grayScaleMaxScore), 0f) / (darknessMaxScore - grayScaleMaxScore), 1f), 0.1f)
             .setOnUpdate((float value) => darknessVolume.weight = value);
+
+        LeanTween.value(bgAudio.volume, Mathf.Min(Mathf.Max(doomPoints, 0f) / darknessMaxScore, 1f), 0.1f)
+            .setOnUpdate((float value) =>
+            {
+                Debug.Log("vol " + value);
+                bgAudio.volume = value;
+            });
     }
 
     // Update is called once per frame
