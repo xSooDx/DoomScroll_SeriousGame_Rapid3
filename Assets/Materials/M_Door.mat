@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-2563851443182823789
+--- !u!114 &-3819304952359034122
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -29,11 +29,13 @@ Material:
   - _RIMSPLITCOLOR_NOSPLIT
   - _USEADDITIONALLIGHTSDIFFUSE_ON
   - _USEHATCHINGCONSTANTSCALE_ON
-  - _USELIGHTRAMP_STEP
+  - _USELIGHTRAMP_POSTERIZE
+  - _USEOUTLINE_ON
   - _USEPURESKETCH_ON
   - _USESPECULAR_ON
-  m_InvalidKeywords: []
-  m_LightmapFlags: 6
+  m_InvalidKeywords:
+  - _USEDIFFUSEWARP_ON
+  m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -42,19 +44,7 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _BasicSubGraph_2c3fa9afad204083bcb90bf992b4ee17_Texture2D314F850_1413273210:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _BasicSubGraph_809418181719048dacfd28e81de85bfd_Texture2D314F850_1413273210:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Custom_Point:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -99,7 +89,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: e2f97b66ebdc1ad4a890ed189a05ef26, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -108,8 +98,8 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
         m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
+        m_Scale: {x: 25, y: 12}
+        m_Offset: {x: 0.24, y: 0}
     - _PaperTexture:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -150,7 +140,7 @@ Material:
     m_Floats:
     - _AdaptiveThicnkess: 0
     - _AdditionalLightsAmount: 1
-    - _AdditionalLightsFaloff: 1
+    - _AdditionalLightsFaloff: 0
     - _AdditionalLightsIntesity: 1
     - _AdditionalLightsSmoothnessMultiplier: 1
     - _AlphaCutoff: 0.5
@@ -161,12 +151,12 @@ Material:
     - _BumpScale: 1
     - _Custom_Point_: 0
     - _CutAngle: 0.1
-    - _Cutoff: 0.5
+    - _Cutoff: 0.637
     - _Darken: 0
     - _DetailNormalMapScale: 1
-    - _DiffusePosterizeOffset: 0
-    - _DiffusePosterizePower: 1
-    - _DiffusePosterizeSteps: 3
+    - _DiffusePosterizeOffset: -0.5
+    - _DiffusePosterizePower: 0.5
+    - _DiffusePosterizeSteps: 10
     - _DiffuseWarpAffectHalftone: 0
     - _DiffuseWarpBrightnessOffset: 1.12
     - _DstBlend: 0
@@ -179,7 +169,7 @@ Material:
     - _HalftoneToonAffect: 0
     - _HaltonePatternSize: 0
     - _IndirectLightAffectOnHatch: 0
-    - _IndirectLightStrength: 1
+    - _IndirectLightStrength: 0.703
     - _InverseMask: 0
     - _LightRampOffset: 0
     - _Lighten: 0
@@ -209,7 +199,6 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _RampDiffuseTextureLoaded: 1
-    - _Ramp_Effect: 1
     - _RimPower: 12
     - _RimSmoothness: 0
     - _RimSplitColor: 0
@@ -221,7 +210,7 @@ Material:
     - _SideShineHardness: 0
     - _SideShineIntensity: 1
     - _SmoothnessMultiplier: 1
-    - _SmoothnessTextureChannel: 0
+    - _SmoothnessTextureChannel: 1
     - _SpecularFaloff: 0
     - _SpecularHighlights: 1
     - _SpecularMaskRotation: 0
@@ -230,7 +219,6 @@ Material:
     - _SpecularPosterizeSteps: 15
     - _SpecularShadowMask: 0
     - _SrcBlend: 1
-    - _Static_Shadow_: 0
     - _StepHalftoneTexture: 0
     - _StepOffset: 0
     - _Strength: 0
@@ -250,14 +238,14 @@ Material:
     - _UseAdaptiveUvsSpecular: 0
     - _UseAdditionalLightsDiffuse: 1
     - _UseBacklight: 0
-    - _UseDiffuseWarp: 0
+    - _UseDiffuseWarp: 1
     - _UseDiffuseWarpAsOverlay: 0
     - _UseDynamicOutline: 0
-    - _UseEmission: 1
+    - _UseEmission: 0
     - _UseEnvironmentRefletion: 0
     - _UseHatchingConstantScale: 1
-    - _UseLightRamp: 0
-    - _UseOutline: 0
+    - _UseLightRamp: 2
+    - _UseOutline: 1
     - _UsePureSketch: 1
     - _UseRimLight: 0
     - _UseScreenUvs: 0
@@ -265,16 +253,15 @@ Material:
     - _UseScreenUvsWarp: 0
     - _UseSpecular: 1
     - _UseSpecularMask: 0
-    - _Vector1_Power: 1
     - _Vector1_smoothness: 0
-    - _WarpStrength: 0
+    - _WarpStrength: 1
     - _WarpTextureRotation: 0
     - _WarpTextureScale: 1
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.5188679, g: 0.15180719, b: 0.04731809, a: 1}
-    - _Color_Rim: {r: 0.6886792, g: 0.07044358, b: 0.01732521, a: 0}
-    - _Color_Texture: {r: 0.764151, g: 0.3463819, b: 0.20665711, a: 0}
+    - _Color: {r: 0.8867924, g: 0.8867924, b: 0.8867924, a: 1}
+    - _Color_Rim: {r: 1, g: 1, b: 1, a: 0}
+    - _Color_Texture: {r: 1, g: 1, b: 1, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _HalftoneColor: {r: 0, g: 0, b: 0, a: 1}
     - _HatchingColor: {r: 0, g: 0, b: 0, a: 1}
@@ -282,7 +269,6 @@ Material:
     - _Outline_Color: {r: 0.09433961, g: 0.09300461, b: 0.09300461, a: 0}
     - _RimColor: {r: 1, g: 1, b: 1, a: 0}
     - _RimShadowColor: {r: 0, g: 0.055514283, b: 0.9622641, a: 0}
-    - _ShadowColor: {r: 0.20000002, g: 0.20000002, b: 0.20000002, a: 0}
-    - _Shadow_Position: {r: -17, g: -13, b: -9, a: 0}
+    - _ShadowColor: {r: 0, g: 0, b: 0, a: 0}
     - _SpecColor: {r: 1, g: 1, b: 1, a: 0}
   m_BuildTextureStacks: []
