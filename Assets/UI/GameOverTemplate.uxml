@@ -1,0 +1,7 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="Background" style="justify-content: center; align-items: center;">
+        <ui:VisualElement style="align-items: center; justify-content: center; font-size: 12px; background-color: rgba(255, 255, 255, 255); height: 347px; width: 385px; border-top-left-radius: 30px; border-bottom-left-radius: 30px; border-top-right-radius: 30px; border-bottom-right-radius: 30px;">
+            <ui:Label text="GAME OVER" display-tooltip-when-elided="true" name="GameOver" style="-unity-font: url(&apos;project://database/Assets/UI/COMICZ.TTF?fileID=12800000&amp;guid=383ea92968ade3344bd0c37fd8fbb421&amp;type=3#COMICZ&apos;); -unity-font-definition: none; font-size: 36px;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
