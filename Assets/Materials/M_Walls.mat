@@ -29,7 +29,7 @@ Material:
   - _RIMSPLITCOLOR_NOSPLIT
   - _USEADDITIONALLIGHTSDIFFUSE_ON
   - _USEHATCHINGCONSTANTSCALE_ON
-  - _USELIGHTRAMP_POSTERIZE
+  - _USELIGHTRAMP_STEP
   - _USEOUTLINE_ON
   - _USEPURESKETCH_ON
   - _USESPECULAR_ON
@@ -89,7 +89,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: d85896b34313fcb41ab1104da11943e1, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -140,7 +140,7 @@ Material:
     m_Floats:
     - _AdaptiveThicnkess: 0
     - _AdditionalLightsAmount: 1
-    - _AdditionalLightsFaloff: 0
+    - _AdditionalLightsFaloff: 0.011
     - _AdditionalLightsIntesity: 1
     - _AdditionalLightsSmoothnessMultiplier: 1
     - _AlphaCutoff: 0.5
@@ -169,7 +169,7 @@ Material:
     - _HalftoneToonAffect: 0
     - _HaltonePatternSize: 0
     - _IndirectLightAffectOnHatch: 0
-    - _IndirectLightStrength: 0.703
+    - _IndirectLightStrength: 1
     - _InverseMask: 0
     - _LightRampOffset: 0
     - _Lighten: 0
@@ -244,7 +244,7 @@ Material:
     - _UseEmission: 0
     - _UseEnvironmentRefletion: 0
     - _UseHatchingConstantScale: 1
-    - _UseLightRamp: 2
+    - _UseLightRamp: 0
     - _UseOutline: 1
     - _UsePureSketch: 1
     - _UseRimLight: 0
@@ -259,7 +259,7 @@ Material:
     - _WarpTextureScale: 1
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.82839537, g: 0.8396226, b: 0.55974835, a: 1}
+    - _Color: {r: 0.9716981, g: 0.9716981, b: 0.9716981, a: 1}
     - _Color_Rim: {r: 1, g: 1, b: 1, a: 0}
     - _Color_Texture: {r: 1, g: 1, b: 1, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}

@@ -19,7 +19,8 @@ Material:
   - _USELIGHTRAMP_STEP
   - _USEPURESKETCH_ON
   - _USESPECULAR_ON
-  m_InvalidKeywords: []
+  m_InvalidKeywords:
+  - _USEDIFFUSEWARP_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -137,7 +138,7 @@ Material:
     - _SpecularPosterizeSteps: 15
     - _SpecularShadowMask: 0
     - _StepHalftoneTexture: 0
-    - _StepOffset: 0
+    - _StepOffset: 0.243
     - _Strength: 0
     - _Thicnkess: 0
     - _UVAnimationSpeed: 2
@@ -154,7 +155,7 @@ Material:
     - _UseAdaptiveUvsSpecular: 0
     - _UseAdditionalLightsDiffuse: 1
     - _UseBacklight: 0
-    - _UseDiffuseWarp: 0
+    - _UseDiffuseWarp: 1
     - _UseDiffuseWarpAsOverlay: 0
     - _UseDynamicOutline: 0
     - _UseEmission: 0
@@ -169,7 +170,7 @@ Material:
     - _UseScreenUvsWarp: 0
     - _UseSpecular: 1
     - _UseSpecularMask: 0
-    - _WarpStrength: 0
+    - _WarpStrength: 1
     - _WarpTextureRotation: 0
     - _WarpTextureScale: 1
     m_Colors:
@@ -180,6 +181,6 @@ Material:
     - _OutlineColor: {r: 0, g: 0, b: 0, a: 0}
     - _RimColor: {r: 1, g: 1, b: 1, a: 0}
     - _RimShadowColor: {r: 0, g: 0.055514283, b: 0.9622641, a: 0}
-    - _ShadowColor: {r: 0, g: 0, b: 0, a: 0}
+    - _ShadowColor: {r: 1, g: 1, b: 1, a: 0}
     - _SpecColor: {r: 1, g: 1, b: 1, a: 0}
   m_BuildTextureStacks: []
