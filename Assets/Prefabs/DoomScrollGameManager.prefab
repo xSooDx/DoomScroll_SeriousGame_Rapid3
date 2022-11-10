@@ -48,23 +48,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doomEventCollection:
-  - triggerAtDoomScore: 30
+  - triggerAtDoomScore: 10
     doomEvent:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: FlickerLigths, Assembly-CSharp
-          m_MethodName: StartFlicker
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    reverseDoomEvent:
       m_PersistentCalls:
         m_Calls: []
   - triggerAtDoomScore: 50
@@ -83,9 +68,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-    reverseDoomEvent:
-      m_PersistentCalls:
-        m_Calls: []
   - triggerAtDoomScore: 70
     doomEvent:
       m_PersistentCalls:
@@ -102,9 +84,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-    reverseDoomEvent:
-      m_PersistentCalls:
-        m_Calls: []
   - triggerAtDoomScore: 90
     doomEvent:
       m_PersistentCalls:
@@ -121,9 +100,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-    reverseDoomEvent:
-      m_PersistentCalls:
-        m_Calls: []
   - triggerAtDoomScore: 110
     doomEvent:
       m_PersistentCalls:
@@ -140,9 +116,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-    reverseDoomEvent:
-      m_PersistentCalls:
-        m_Calls: []
   - triggerAtDoomScore: 130
     doomEvent:
       m_PersistentCalls:
@@ -159,9 +132,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-    reverseDoomEvent:
-      m_PersistentCalls:
-        m_Calls: []
   - triggerAtDoomScore: 150
     doomEvent:
       m_PersistentCalls:
@@ -178,9 +148,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-    reverseDoomEvent:
-      m_PersistentCalls:
-        m_Calls: []
   - triggerAtDoomScore: 180
     doomEvent:
       m_PersistentCalls:
@@ -197,9 +164,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-    reverseDoomEvent:
-      m_PersistentCalls:
-        m_Calls: []
   doomPoints: 0
   onScoreUpdate:
     m_PersistentCalls:
@@ -208,7 +172,9 @@ MonoBehaviour:
   grayscaleVolume: {fileID: 1656947466683825864}
   grayScaleMaxScore: 150
   darknessMaxScore: 300
+  maxVolume: 0.75
   bgAudio: {fileID: 2012758246}
+  xBtnRef: {fileID: 0}
 --- !u!82 &2012758246
 AudioSource:
   m_ObjectHideFlags: 0

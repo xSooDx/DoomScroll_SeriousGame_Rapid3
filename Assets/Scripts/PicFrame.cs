@@ -28,7 +28,7 @@ public class PicFrame : MonoBehaviour
     public void PushFrame()
     {
         rb.isKinematic = false;
-        rb.AddForceAtPosition((3 * Vector3.forward + Random.onUnitSphere).normalized * pushForce, transform.position + transform.up, ForceMode.Impulse);
+        rb.AddForceAtPosition((3 * transform.forward  + Random.onUnitSphere).normalized * pushForce, transform.position + transform.up, ForceMode.Impulse);
     }
 
     private void OnCollisionEnter(Collision collision)

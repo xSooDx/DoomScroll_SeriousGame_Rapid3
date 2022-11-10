@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Rendering;
-
+using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -24,7 +25,11 @@ public class GameManager : MonoBehaviour
     [SerializeField] float grayScaleMaxScore = 100f;
     [SerializeField] float darknessMaxScore = 200f;
 
+    [SerializeField] float maxVolume = 0.75f;
+
     [SerializeField] AudioSource bgAudio;
+
+    [SerializeField] InputActionReference xBtnRef;
 
 
     private void Awake()
@@ -49,7 +54,18 @@ public class GameManager : MonoBehaviour
         darknessVolume.weight = 0;
         darknessVolume.priority = 1;
         onScoreUpdate.AddListener(OnDoomPointsUpdate);
+        //vrInpuit.action.
+       
 
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if(xBtnRef.action.IsPressed())
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
     }
 
     public void ResetGame()
@@ -79,12 +95,12 @@ public class GameManager : MonoBehaviour
 
         if (currentDoomIndex == 0) return;
 
-        DoomEventTrigger eventTrigger = doomEventCollection[currentDoomIndex - 1];
-        if (doomPoints < eventTrigger.triggerAtDoomScore)
-        {
-            eventTrigger.reverseDoomEvent.Invoke();
-            currentDoomIndex--;
-        }
+        //DoomEventTrigger eventTrigger = doomEventCollection[currentDoomIndex - 1];
+        //if (doomPoints < eventTrigger.triggerAtDoomScore)
+        //{
+        //    eventTrigger.reverseDoomEvent.Invoke();
+        //    currentDoomIndex--;
+        //}
     }
 
     void OnDoomPointsUpdate(int doomPoints)
@@ -100,14 +116,8 @@ public class GameManager : MonoBehaviour
             .setOnUpdate((float value) =>
             {
                 Debug.Log("vol " + value);
-                bgAudio.volume = value;
+                bgAudio.volume = value * maxVolume;
             });
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 }
 
