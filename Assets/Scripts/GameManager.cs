@@ -24,6 +24,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] float grayScaleMaxScore = 100f;
     [SerializeField] float darknessMaxScore = 200f;
 
+    [SerializeField] AudioSource bgAudio;
+
 
     private void Awake()
     {
@@ -34,8 +36,10 @@ public class GameManager : MonoBehaviour
         else
         {
             Destroy(this.gameObject);
+            return;
         }
         ResetGame();
+
     }
 
     private void Start()
@@ -45,12 +49,14 @@ public class GameManager : MonoBehaviour
         darknessVolume.weight = 0;
         darknessVolume.priority = 1;
         onScoreUpdate.AddListener(OnDoomPointsUpdate);
+
     }
 
-    void ResetGame()
+    public void ResetGame()
     {
         currentDoomIndex = 0;
         doomPoints = 0;
+        bgAudio.volume = 0;
     }
 
     public void AddDoomPoints(int points)
@@ -89,6 +95,13 @@ public class GameManager : MonoBehaviour
 
         LeanTween.value(darknessVolume.weight, Mathf.Min(Mathf.Max((doomPoints - grayScaleMaxScore), 0f) / (darknessMaxScore - grayScaleMaxScore), 1f), 0.1f)
             .setOnUpdate((float value) => darknessVolume.weight = value);
+
+        LeanTween.value(bgAudio.volume, Mathf.Min(Mathf.Max(doomPoints, 0f) / darknessMaxScore, 1f), 0.1f)
+            .setOnUpdate((float value) =>
+            {
+                Debug.Log("vol " + value);
+                bgAudio.volume = value;
+            });
     }
 
     // Update is called once per frame
