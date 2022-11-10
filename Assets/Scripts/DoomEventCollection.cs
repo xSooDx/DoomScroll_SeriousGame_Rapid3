@@ -15,5 +15,4 @@ public class DoomEventTrigger
 {
     public int triggerAtDoomScore;
     public UnityEvent doomEvent;
-    public UnityEvent reverseDoomEvent;
 }

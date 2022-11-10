@@ -16,7 +16,7 @@ public class PhoneScreenController : MonoBehaviour
     [SerializeField] TextMeshProUGUI scoreText;
     [SerializeField] RectTransform scoreEffectSpawn;
     [SerializeField] TextMeshProUGUI scoreTextPrefab;
-
+    [SerializeField] GameObject tutorial;
 
     [HideInInspector] public XRBaseControllerInteractor currentInteractor;
 
@@ -27,12 +27,15 @@ public class PhoneScreenController : MonoBehaviour
     [Range(0, 1f)] public float postHapticDuration = 0.2f;
     [Range(0, 1f)] public float likeHapticDuration = 0.4f;
     [Range(0, 1f)] public float shareHapticDuration = 0.6f;
+    
 
     public float forwardDistance = 0.1f;
 
     [SerializeField] AudioClip shareSound;
     [SerializeField] AudioClip likeSound;
-    [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioClip scrollSound;
+    [SerializeField] AudioSource postAudioSource;
+    [SerializeField] AudioSource actionAudioSource;
 
     Coroutine audioCoroutine = null;
 
@@ -74,7 +77,7 @@ public class PhoneScreenController : MonoBehaviour
             currPost = CreatePost(data).GetComponent<RectTransform>();
             postHeight = currPost.rect.height;
             PostScroll();
-
+            
         }
     }
     void PostScroll()
@@ -106,8 +109,10 @@ public class PhoneScreenController : MonoBehaviour
         //if (currentPostIndex < postCollection.list.Count - 1)
         //{
         //currentPostIndex++;
+        actionAudioSource.PlayOneShot(scrollSound, 0.4f);
         LoadPost(currentPostIndex);
         PostView();
+        tutorial.SetActive(false);
         //}
 
     }
@@ -126,20 +131,22 @@ public class PhoneScreenController : MonoBehaviour
 
     public void PostLike()
     {
-        audioSource.PlayOneShot(likeSound);
+        actionAudioSource.PlayOneShot(likeSound);
         int score = postCollection.list[currentPostIndex].postScore * 2;
         GameManager.instance.AddDoomPoints(score);
         SpawnScoreTextEffect(score);
         currentInteractor.SendHapticImpulse(likeHapticIntensity, likeHapticDuration);
+        tutorial.SetActive(false);
     }
 
     public void PostShare()
     {
-        audioSource.PlayOneShot(shareSound);
+        actionAudioSource.PlayOneShot(shareSound);
         int score = postCollection.list[currentPostIndex].postScore * 4;
         GameManager.instance.AddDoomPoints(score);
         SpawnScoreTextEffect(score);
         currentInteractor.SendHapticImpulse(shareHapticIntensity, shareHapticDuration);
+        tutorial.SetActive(false);
     }
 
     public void ActivateInput()
@@ -152,9 +159,12 @@ public class PhoneScreenController : MonoBehaviour
     {
         TextMeshProUGUI text = Instantiate(scoreTextPrefab, scoreEffectSpawn);
         text.text = "+" + score;
+        LeanTween.scale(text.gameObject, text.transform.localScale * 1.25f, 1f).setEaseOutElastic();
         text.transform.LeanMoveLocalY(text.transform.position.y + postHeight / 2, 1f);
         text.transform.LeanMoveLocalZ(text.transform.position.z - postHeight / 2, 1f)
             .setOnComplete(() => Destroy(text.gameObject));
+
+        
     }
 
     public void DeactivateInput()
@@ -170,14 +180,14 @@ public class PhoneScreenController : MonoBehaviour
             audioCoroutine = null;
         }
 
-        audioSource.Stop();
-        audioSource.clip = clip;
-        audioSource.volume = 0;
-        audioSource.Play();
+        postAudioSource.Stop();
+        postAudioSource.clip = clip;
+        postAudioSource.volume = 0;
+        postAudioSource.Play();
         float time = 0;
         while (time < audioFadeInOutTime)
         {
-            audioSource.volume = time / audioFadeInOutTime;
+            postAudioSource.volume = time / audioFadeInOutTime;
             time += Time.deltaTime;
             yield return null;
         }
@@ -185,7 +195,7 @@ public class PhoneScreenController : MonoBehaviour
         yield return new WaitForSeconds(clip.length - audioFadeInOutTime * 2);
         while (time > 0)
         {
-            audioSource.volume = time / audioFadeInOutTime;
+            postAudioSource.volume = time / audioFadeInOutTime;
             time -= Time.deltaTime;
             yield return null;
         }
